@@ -26,7 +26,7 @@ class Order
     #[ORM\Column(type: 'datetime')]
     private $date_creation;
 
-    #[ORM\ManyToOne(targetEntity: user::class, inversedBy: 'orders')]
+    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'orders')]
     private $user_id;
 
     public function getId(): ?int
