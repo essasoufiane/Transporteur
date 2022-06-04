@@ -23,7 +23,7 @@
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link animate__flash animate__animated animate__delay-5s" href="#">
+							<a class="nav-link animate__flash animate__animated animate__delay-5s" href="{{path('app_register')}}">
                                 <i class="fa fa-newspaper"></i>
                                 Inscription
 							</a>
@@ -37,41 +37,38 @@
 						<li class="nav-item dropdown">
 
 
-							{% if user[3] and user[2] == 'admin' %}
+							{% if is_granted('ROLE_ADMIN') %}
 							{# --------------admin menu--------------------- #}
 							<a class="nav-link dropdown-toggle animate__shakeY animate__animated animate__delay-5s" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-user"></i>
-                               {{user[0] | title}}
+                               {{ app.user.lastname }}
                             </a>
 							<div class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="#">Mon Profil</a>
-								<a class="dropdown-item" href="#"><i class="fa fa-pen"></i>Créer un article</a>
-								<a class="dropdown-item" href="#">Mes articles</a>
-								<a class="dropdown-item" href="#">Espace Admin</a>
+								<a class="dropdown-item" href="#">Dashboard Admin</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#">Déconnexion</a>
+								<a class="dropdown-item" href="{{path('app_logout')}}">Déconnexion</a>
 							</div>
 
-							{% elseif user[3] and user[2] == 'user' %}
 				{# -----------------------------menu user--------------------------------------------- #}
+							{% elseif is_granted('ROLE_USER') %}
 							<a class="nav-link dropdown-toggle animate__shakeY animate__animated animate__delay-5s" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-user"></i>
-                                {{user[0] | title}}
+                                {{ app.user.lastname }}
                             </a>
 							<div class="dropdown-menu dropdown-menu-right">
 								<a class="dropdown-item" href="#">Mon Profil</a>
-								<a class="dropdown-item" href="#"><i class="fa fa-pen"></i>Créer un article</a>
-								<a class="dropdown-item" href="#">Mes articles</a>
+								<a class="dropdown-item" href="#"><i class="fa fa-pen"></i>Commander une course</a>
+								<a class="dropdown-item" href="#">Dashboard</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#">Déconnexion</a>
+								<a class="dropdown-item" href="{{path('app_logout')}}">Déconnexion</a>
 							</div>
 							{% else %}
 
-							<a href="#" class="text-white pr-3 animate__shakeY animate__animated animate__delay-5s">
+							<a href="{{path('app_register')}}" class="text-white pr-3 animate__shakeY animate__animated animate__delay-5s">
                                 <i class="fas fa-angle-right"></i>
                                 Inscription
                             </a>
-							<a href="#" class="text-white animate__shakeY animate__animated animate__delay-5s">
+							<a href="{{path('app_login')}}" class="text-white animate__shakeY animate__animated animate__delay-5s">
                                 <i class="fas fa-angle-right"></i>
                                 Connexion
                             </a>
