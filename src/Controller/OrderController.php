@@ -31,8 +31,13 @@ class OrderController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            // ajout de user_id pour marquer la relation via entité order
+            
             $order->setuserId($this->getUser());
+            
             $orderRepository->add($order, true);
+            // entitymanagerinterface 
+            // 
             $manager->persist($order);
             $manager->flush();
 
