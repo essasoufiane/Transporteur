@@ -1,4 +1,18 @@
-{{ form_start(form) }}
+{# {{ form_start(form) }}
     {{ form_widget(form) }}
     <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }} #}
+
+
+{# daouda #}
+
+{{ form_start(form) }}
+    Titre {{ form_widget(form.firstname, {'attr':{'class': 'form form-control' }}) }}
+     {{ form_row(form.lastname, {'attr':{'class': 'form form-control' }}) }}
+    {{ form_row(form.email, {'attr':{'class': 'form form-control' }}) }}
+         {{ form_row(form.password, {'attr':{'class': 'form form-control' }}) }}
+        {{ form_row(form.age, {'attr':{'class': 'form form-control' }}) }}
+          {{ form_row(form.adresse, {'attr':{'class': 'form form-control' }}) }}
+      <br>
+    <button class="btn btn-primary btn-block p-2">{{ button_label | default ('Save') }}</button>
 {{ form_end(form) }}

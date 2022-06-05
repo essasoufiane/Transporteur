@@ -87,6 +87,7 @@ class Order
         return $this->user_id;
     }
 
+
     public function setUserId(?user $user_id): self
     {
         $this->user_id = $user_id;
@@ -94,3 +95,10 @@ class Order
         return $this;
     }
 }
+
+
+/*
+    /**
+ *
+ * @ORM\Column(name="data", type="array")
+ */
