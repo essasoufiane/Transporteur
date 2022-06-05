@@ -15,7 +15,7 @@ class OrderType extends AbstractType
             ->add('depart')
             ->add('destination')
             ->add('date_reservation')
-            ->add('date_creation')
+            //->add('date_creation')
             // ->add('user_id')
         ;
     }

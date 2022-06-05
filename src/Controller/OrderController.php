@@ -26,13 +26,14 @@ class OrderController extends AbstractController
     public function new(Request $request, OrderRepository $orderRepository, EntityManagerInterface $manager): Response
     {
         $order = new Order();
+        $order->setDateCreation(new \Datetime);
        
         $form = $this->createForm(OrderType::class, $order);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             // ajout de user_id pour marquer la relation via entité order
-            
+
             $order->setuserId($this->getUser());
             
             $orderRepository->add($order, true);
@@ -44,7 +45,9 @@ class OrderController extends AbstractController
             $this->addFlash('success', 
                             "La commande <strong>{$order->getdestination()}</strong> a bien été crée");
 
-            return $this->redirectToRoute('app_order_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_order_index', [
+                // 
+            ], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('order/new.html.twig', [
