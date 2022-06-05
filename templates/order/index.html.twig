@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Order index{% endblock %}
+{% block title %}Les réservations | example {% endblock %}
 
 {% block body %}
     <h1>Order index</h1>
@@ -8,12 +8,12 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
+                <th>Identifiants </th>
                 <th>Depart</th>
                 <th>Destination</th>
-                <th>Date_reservation</th>
-                <th>Date_creation</th>
-                <th>actions</th>
+                <th>Date de réservation</th>
+                <th>Date de creation</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -37,5 +37,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_order_new') }}">Create new</a>
+    <a href="{{ path('app_order_new') }}">Créer une commande</a>
 {% endblock %}

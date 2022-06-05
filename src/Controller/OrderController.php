@@ -13,12 +13,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 #[Route('/order')]
 class OrderController extends AbstractController
-{
+{ 
     #[Route('/', name: 'app_order_index', methods: ['GET'])]
     public function index(OrderRepository $orderRepository): Response
-    {
+    {   
         return $this->render('order/index.html.twig', [
             'orders' => $orderRepository->findAll(),
+          
         ]);
     }
 
