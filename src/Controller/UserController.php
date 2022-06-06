@@ -23,6 +23,15 @@ class UserController extends AbstractController
             'users' => $userRepository->findAll(),
         ]);
     }
+    // --soufiane
+    #[Route('/show_user', name: 'show_user')]
+    public function showUser(UserRepository $userRepository): Response
+    {
+        return $this->render('user/profil.user.html.twig', [
+            'users' => $userRepository->findAll(),
+        ]);
+    }
+    // --END soufiane
 
     #[Route('/new', name: 'app_user_new', methods: ['GET', 'POST'])]
     public function new(Request $request, UserRepository $userRepository, entityManagerInterface $manager): Response
