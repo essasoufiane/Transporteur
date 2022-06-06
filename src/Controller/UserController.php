@@ -25,7 +25,7 @@ class UserController extends AbstractController
     }
 
     #[Route('/new', name: 'app_user_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, UserRepository $userRepository): Response
+    public function new(Request $request, UserRepository $userRepository, entityManagerInterface $manager): Response
     {
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
@@ -33,7 +33,14 @@ class UserController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $userRepository->add($user, true);
+            $manager->persist($user);
+            $manager->flush();  
 
+            // ajout cette ligne : 
+            $this->addFlash('success', 
+            "Votre <strong>{$user->getfirstname()}</strong> a bien été crée");
+
+            // fin 
             return $this->redirectToRoute('app_user_index', [], Response::HTTP_SEE_OTHER);
         }
 
@@ -51,8 +58,12 @@ class UserController extends AbstractController
         ]);
     }
 
+
+
+
+    //daouda 
     #[Route('/{id}/edit', name: 'app_user_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, User $user, UserRepository $userRepository, EntityManagerInterface $manager): Response
+    public function edit(Request $request, user $user, UserRepository $userRepository): Response
     {
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
@@ -60,27 +71,15 @@ class UserController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $userRepository->add($user, true);
 
-            // daouda 
-            $manager->flush();
-
-            $this->addFlash(
-                'info',
-                "<strong>{$user->getfirstname()}</strong> votre profil a bien été modifié"
-            );
-            // fin daouda 
-            // return $this->redirectToRoute('app_user_index', [], Response::HTTP_SEE_OTHER);
-            return $this->redirectToRoute('account_profil' , [
-                'slug' => $user->getId()
-            ]);
+            return $this->redirectToRoute('app_user_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        // return $this->renderForm('user/edit.html.twig', [
-        //     'user' => $user,
-        //     'form' => $form->createView(),
-        // ]);
-        // nouveau 
-        $this->renderForm('user/edit.html.twig', ['form' => $form]);
+        return $this->renderForm('user/edit.html.twig', [
+            'user' => $user,
+            'form' => $form
+        ]);
     }
+//daouda
 
     #[Route('/{id}', name: 'app_user_delete', methods: ['POST'])]
     public function delete(Request $request, User $user, UserRepository $userRepository): Response
