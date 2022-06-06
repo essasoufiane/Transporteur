@@ -31,6 +31,7 @@ class UserController extends AbstractController
             'users' => $userRepository->findAll(),
         ]);
     }
+
     // --END soufiane
 
     #[Route('/new', name: 'app_user_new', methods: ['GET', 'POST'])]

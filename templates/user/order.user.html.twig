@@ -25,7 +25,7 @@
                 <td>{{ order.dateReservation ? order.dateReservation|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ order.dateCreation ? order.dateCreation|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('app_order_show', {'id': order.id}) }}">show</a>
+                    <a href="{{ path('app_order_show', {'id': order.id}) }}">Voir plus de details</a>
                     <a href="{{ path('app_order_edit', {'id': order.id}) }}">edit</a>
                 </td>
             </tr>
@@ -37,5 +37,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_order_new') }}">Créer une commande</a>
+    <a href="{{ path('app_order_new') }}">Commander une course</a>
 {% endblock %}

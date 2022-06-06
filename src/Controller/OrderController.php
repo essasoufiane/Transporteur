@@ -22,6 +22,17 @@ class OrderController extends AbstractController
           
         ]);
     }
+    // ---soufiane
+
+    #[Route('/show_order', name: 'show_order')]
+    public function showOrder(OrderRepository $orderRepository): Response
+    {
+        return $this->render('user/order.user.html.twig', [
+            'orders' => $orderRepository->findAll(),
+        ]);
+    }
+
+    // --END soufiane
 
     #[Route('/new', name: 'app_order_new', methods: ['GET', 'POST'])]
     public function new(Request $request, OrderRepository $orderRepository, EntityManagerInterface $manager): Response
