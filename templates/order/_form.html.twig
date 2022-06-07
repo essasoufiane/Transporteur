@@ -6,7 +6,7 @@
     <label class="bg-dark text-center text-white">Adresse de départ</label>
     {{ form_widget(form.depart,   {'attr':{'class':'form form-control'}}) }}
     {{ form_row(form.destination,   {'attr':{'class':'form form-control'}}) }}
-    {{ form_row(form.date_reservation,   {'attr':{'class':'form form-control'}}) }}
+    {{ form_row(form.date_reservation,   {'attr':{'class':'form form-control d-flex'}}) }}
   
     <button class="btn btn-success btn-block p-3 my-1">{{ button_label|default('Enregistrer') }}</button>
 {{ form_end(form) }}
