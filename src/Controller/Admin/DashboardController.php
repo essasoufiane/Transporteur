@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Contact;
 use App\Entity\User;
 use App\Entity\Order;
 use Symfony\Component\HttpFoundation\Response;
@@ -41,6 +42,7 @@ class DashboardController extends AbstractDashboardController
      
         yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-user', User::class);
         yield MenuItem::linkToCrud('Réservations', 'fas fa-car', Order::class);
+        yield MenuItem::linkToCrud('Messages reçus', 'fa fa-envelope', Contact::class);
 
       
     }
