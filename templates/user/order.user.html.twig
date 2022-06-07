@@ -17,6 +17,7 @@
             </tr>
         </thead>
         <tbody>
+
         {% for order in app.user.orders %}
             <tr>
                 <td>{{ order.id }}</td>
@@ -31,7 +32,7 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="6">no records found</td>
+                <td colspan="6">Il n'y a aucune commade acutuellement !👌 </td>
             </tr>
         {% endfor %}
         </tbody>
