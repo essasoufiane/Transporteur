@@ -3,7 +3,11 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Order;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 
 class OrderCrudController extends AbstractCrudController
 {
@@ -12,14 +16,19 @@ class OrderCrudController extends AbstractCrudController
         return Order::class;
     }
 
-    /*
+    
     public function configureFields(string $pageName): iterable
     {
         return [
             IdField::new('id'),
-            TextField::new('title'),
-            TextEditorField::new('description'),
+            TextField::new('depart'),
+            TextField::new('destination'),
+            DateField::new('date_reservation'),
+            DateField::new('date_creation'),
+            
+            
         ];
     }
-    */
+    
+    
 }
