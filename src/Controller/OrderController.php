@@ -13,16 +13,16 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 #[Route('/order')]
 class OrderController extends AbstractController
-{ 
+{
     #[Route('/', name: 'app_order_index', methods: ['GET'])]
     public function index(OrderRepository $orderRepository): Response
-    {   
+    {
         return $this->render('order/index.html.twig', [
             'orders' => $orderRepository->findAll(),
-          
+
         ]);
     }
-    
+
     // ---soufiane
     #[Route('/show_order', name: 'show_order')]
     public function showOrder(OrderRepository $orderRepository): Response
@@ -34,28 +34,36 @@ class OrderController extends AbstractController
 
     // --END soufiane
 
+
     #[Route('/new', name: 'app_order_new', methods: ['GET', 'POST'])]
     public function new(Request $request, OrderRepository $orderRepository, EntityManagerInterface $manager): Response
     {
+
+
+        $contact = new Order();
+
+
+
+
         $order = new Order();
         $order->setDateCreation(new \Datetime);
-       
+
         $form = $this->createForm(OrderType::class, $order);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            // ajout de user_id pour marquer la relation via entité order
-
             $order->setuserId($this->getUser());
-            
+
             $orderRepository->add($order, true);
             // entitymanagerinterface 
-            // 
+
             $manager->persist($order);
             $manager->flush();
 
-            $this->addFlash('success', 
-                            "La commande <strong>{$order->getdestination()}</strong> a bien été crée");
+            $this->addFlash(
+                'success',
+                "La commande <strong>{$order->getdestination()}</strong> a bien été crée"
+            );
 
             return $this->redirectToRoute('app_order_index', [
                 // 
