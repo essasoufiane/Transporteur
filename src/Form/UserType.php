@@ -9,6 +9,8 @@ use Symfony\Component\Form\AbstractType;
 
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 
 class UserType extends AbstractType
@@ -18,7 +20,8 @@ class UserType extends AbstractType
         $builder
             ->add('email')
             // ->add('roles', CollectionType::class)
-            ->add('password')
+            //  ->add('password')
+            
             ->add('lastname')
             ->add('firstname')
             ->add('age')
