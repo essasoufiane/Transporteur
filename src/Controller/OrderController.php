@@ -67,7 +67,7 @@ class OrderController extends AbstractController
                 "La commande <strong>{$order->getdestination()}</strong> a bien été crée"
             );
 
-            return $this->redirectToRoute('app_order_index', [
+            return $this->redirectToRoute('show_order', [
                 // 
             ], Response::HTTP_SEE_OTHER);
         }
