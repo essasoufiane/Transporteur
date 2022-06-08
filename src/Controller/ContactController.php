@@ -52,6 +52,7 @@ class ContactController extends AbstractController
             $mail->replyTo($this->getParameter('app.contact.email'));
             $mail->subject($this->getParameter('app.contact.subject'));
             $mail->html($contact->getMessage());
+           // $mail->context($contact->getMessage());
             
             //envoie de masse vers le user 
             $mailerInterface->send($mail);

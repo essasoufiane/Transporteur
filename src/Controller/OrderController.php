@@ -3,12 +3,16 @@
 namespace App\Controller;
 
 use App\Entity\Order;
+use App\Entity\Contact;
 use App\Form\OrderType;
 use App\Repository\OrderRepository;
+use App\Repository\ContactRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 #[Route('/order')]
@@ -23,7 +27,6 @@ class OrderController extends AbstractController
         ]);
     }
 
-    // ---soufiane
     #[Route('/show_order', name: 'show_order')]
     public function showOrder(OrderRepository $orderRepository): Response
     {
@@ -32,18 +35,12 @@ class OrderController extends AbstractController
         ]);
     }
 
-    // --END soufiane
+   
 
 
     #[Route('/new', name: 'app_order_new', methods: ['GET', 'POST'])]
     public function new(Request $request, OrderRepository $orderRepository, EntityManagerInterface $manager): Response
     {
-
-
-        $contact = new Order();
-
-
-
 
         $order = new Order();
         $order->setDateCreation(new \Datetime);
@@ -53,13 +50,18 @@ class OrderController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $order->setuserId($this->getUser());
+            // daouda 
+         
 
+            // fin daouda 
             $orderRepository->add($order, true);
             // entitymanagerinterface 
 
             $manager->persist($order);
             $manager->flush();
-
+           
+          
+            
             $this->addFlash(
                 'success',
                 "La commande <strong>{$order->getdestination()}</strong> a bien été crée"
