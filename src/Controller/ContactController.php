@@ -4,13 +4,14 @@ namespace App\Controller;
 
 use App\Entity\Contact;
 use App\Form\ContactType;
-use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mime\Email;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ContactController extends AbstractController
 {
@@ -46,13 +47,14 @@ class ContactController extends AbstractController
              * entity mailer interface, appelle de classe native Email(), 
              * 
              */
-            $mail = new Email();
+            $mail = new TemplatedEmail();
             $mail->from($contact->getEmail());
             $mail->to($this->getParameter('app.contact.email'));
             $mail->replyTo($this->getParameter('app.contact.email'));
             $mail->subject($this->getParameter('app.contact.subject'));
             $mail->html($contact->getMessage());
-           // $mail->context($contact->getMessage());
+            $mail->htmlTemplate('email/template.email.html.twig');
+           $mail->context(['user' => $contact]);
             
             //envoie de masse vers le user 
             $mailerInterface->send($mail);
