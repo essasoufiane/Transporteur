@@ -1,33 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+	<a class="navbar-brand text-white" href="#">Esy Drive</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
 
-    		<header>
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top mb-5">
-
-				<a class="navbar-brand animate__flash animate__animated animate__delay-5s" href="{{path('home_page')}}">
-                    Transpoteur
-                </a>
-
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
-				<div class="collapse navbar-collapse" id="navbarColor01">
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
 
 						<li class="nav-item">
-							<a class="nav-link animate__flash animate__animated animate__delay-5s" href="{{path('home_page')}}">
+							<a class="nav-link animate__flash animate__animated animate__delay-5s text-white" href="{{path('home_page')}}">
                                 <i class="fa fa-home"></i>
                                 Accueil
 							</a>
 						</li>
 							<li class="nav-item">
-							<a class="nav-link animate__flash animate__animated animate__delay-5s" href="{{path('app_contact')}}">
+							<a class="nav-link animate__flash animate__animated animate__delay-5s text-white" href="{{path('app_contact')}}">
                                 <i class="fa fa-envelope"></i>
                                 Contact
 							</a>
 						</li>
 
 						<li class="nav-item">
-								<a class="nav-link animate__flash animate__animated animate__delay-5s" href="{{path('app_order_new')}}"><i class="fa fa-car"></i> Commander une course</a>
+								<a class="nav-link animate__flash animate__animated animate__delay-5s text-white" href="{{path('app_order_new')}}"><i class="fa fa-car"></i> Commander une course</a>
 						</li>
 
                     </ul>
@@ -37,36 +31,36 @@
 
 							{% if is_granted('ROLE_ADMIN') %}
 							{# --------------admin menu--------------------- #}
-							<a class="nav-link dropdown-toggle animate__shakeY animate__animated animate__delay-5s" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							<a class="nav-link dropdown-toggle animate__shakeY animate__animated animate__delay-5s text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-user"></i>
                                {{ app.user.lastname }}
                             </a>
 							<div class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="{{path('admin')}}">Dashboard Admin</a>
+								<a class="dropdown-item text-white" href="{{path('admin')}}">Dashboard Admin</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="{{path('app_logout')}}">Déconnexion</a>
+								<a class="dropdown-item text-white" href="{{path('app_logout')}}">Déconnexion</a>
 							</div>
 
 				{# -----------------------------menu user--------------------------------------------- #}
 							{% elseif is_granted('ROLE_USER') %}
-							<a class="nav-link dropdown-toggle animate__shakeY animate__animated animate__delay-5s" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							<a class="nav-link dropdown-toggle animate__shakeY animate__animated animate__delay-5s text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-user"></i>
                                 {{ app.user.lastname }}
                             </a>
 							<div class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="{{path('app_order_new')}}"><i class="fa fa-car"></i> Commander une course</a>
-								<a class="dropdown-item" href="{{path('show_user')}}">Mon profile</a>
-								<a class="dropdown-item" href="{{path('show_order')}}">Mes commandes</a>
+								<a class="dropdown-item text-white" href="{{path('app_order_new')}}"><i class="fa fa-car"></i> Commander une course</a>
+								<a class="dropdown-item text-white" href="{{path('show_user')}}">Mon profile</a>
+								<a class="dropdown-item text-white" href="{{path('show_order')}}">Mes commandes</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="{{path('app_logout')}}">Déconnexion</a>
+								<a class="dropdown-item text-white" href="{{path('app_logout')}}">Déconnexion</a>
 							</div>
 							{% else %}
 
-							<a href="{{path('app_register')}}" class="text-white pr-3 animate__shakeY animate__animated animate__delay-5s">
+							<a href="{{path('app_register')}}" class="text-white pr-3 animate__shakeY animate__animated animate__delay-5s text-white">
                                 <i class="fas fa-angle-right"></i>
                                 Inscription
                             </a>
-							<a href="{{path('app_login')}}" class="text-white animate__shakeY animate__animated animate__delay-5s">
+							<a href="{{path('app_login')}}" class="text-white animate__shakeY animate__animated animate__delay-5s text-white">
                                 <i class="fas fa-angle-right"></i>
                                 Connexion
                             </a>
@@ -75,23 +69,6 @@
 
 						</li>
 					</ul>
-				</div>
-			</nav>
-		</header>
-		{# {% for label, messages in app.flashes %}
-	<div class="container my-5">
-		{% for message in messages %}
-			<div class="alert alert-{{ label }}">
-				{{ message | raw }}
-			</div>
-		{% endfor %}
+
 	</div>
-{% endfor %} #}
-
-
-
-
-
-	{# <pre>
-		{{ dump(user) }}
-	</pre> #}
+</nav>
