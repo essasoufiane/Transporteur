@@ -1,12 +1,10 @@
-<div class="container my-5 w-50 bg-dark border  text-center text-white ">
-			<h1 class="container my-5 ">Créer votre réservation</h1>
-
+<div class="container">
 {{ form_start(form) }}
 
-    <label class="bg-dark text-center text-white">Adresse de départ</label>
+    <label class="bg-dark text-center text-white mt-5">Adresse de départ</label>
     {{ form_widget(form.depart,   {'attr':{'class':'form form-control'}}) }}
     {{ form_row(form.destination,   {'attr':{'class':'form form-control'}}) }}
-    {{ form_row(form.date_reservation,   {'attr':{'class':'form form-control d-flex'}}) }}
+    {{ form_row(form.date_reservation, ) }}
   
     <button class="btn btn-success btn-block p-3 my-1 bold">{{ button_label|default('Enregistrer') }}</button>
 {{ form_end(form) }}
