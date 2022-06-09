@@ -1,0 +1,5 @@
+
+.container, .container-sm, .container-md {
+    max-width: 100% !important;
+    background-color: rgb(106, 184, 38); 
+}
