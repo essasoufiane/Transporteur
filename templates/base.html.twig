@@ -13,27 +13,9 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" integrity="sha512-SJw7jzjMYJhsEnN/BuxTWXkezA2cRanuB8TdCNMXFJjxG9ZGSKOX5P3j03H6kdMxalKHZ7vlBMB4CagFP/de0A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-		<style>
-			.input-group-text {
-				display: -webkit-box;
-				display: -ms-flexbox;
-				display: flex;
-				-webkit-box-align: center;
-				-ms-flex-align: center;
-				align-items: center;
-				padding: 0.375rem 0.75rem;
-				margin-bottom: 0;
-				font-size: 1rem;
-				font-weight: 400;
-				line-height: 0.8;
-				color: #dee2e6;
-				text-align: center;
-				white-space: nowrap;
-				background-color: #2098d1;
-				border: 1px solid transparent;
-				border-radius: 0;
-			}
-		</style>
+		{# pour mettre vos styles css  #}
+		<link rel="stylesheet" href="{{ asset('assets/css/master.css')}}" >
+
 
 
 		{% block stylesheets %}
@@ -44,7 +26,7 @@
 			{{ encore_entry_script_tags('app') }}
 		{% endblock %}
 	</head>
-	<body>
+	<body class="container">
 		{% include "partials/header.html.twig" %}
 
 		{% block body %}{% endblock %}
