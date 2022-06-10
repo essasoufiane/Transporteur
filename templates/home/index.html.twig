@@ -4,52 +4,56 @@
 {% endblock %}
 
 {% block body %}
-
 	{# ------image Background slider #}
+
+
 	<div class="bd-example">
-	  <div id="carouselExampleCaptions" class="carousel slide pointer-event" data-ride="carousel">
-	    <div class="carousel-inner" role="listbox">
-	      <div class="carousel-item active">
-	        <img class="d-block w-100" data-src="holder.js/900x300?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide" alt="First slide [900x300]" src="assets/images/FOND900_800.png" data-holder-rendered="true">
-	        <div class="carousel-caption d-none d-md-block">
-	        </div>
-	      </div>
-	      <div class="carousel-item">
-	        <img class="d-block w-100" data-src="holder.js/900x300?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide" alt="Second slide [900x300]" src="assets/images/FOND900_800_2.png" data-holder-rendered="true">
-	        <div class="carousel-caption d-none d-md-block">
-	        </div>
-	      </div>
-		   <div class="carousel-item">
-	        <img class="d-block w-100" data-src="holder.js/900x300?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide" alt="Second slide [900x300]" src="assets/images/chauffeur-prive2.png" data-holder-rendered="true">
-	        <div class="carousel-caption d-none d-md-block">
-	        </div>
-	      </div>
-	    </div>
-	  </div>
+		<div id="carouselExampleCaptions" class="carousel slide pointer-event" data-ride="carousel">
+			<div class="carousel-inner" role="listbox">
+				<div class="carousel-item active">
+					<img class="d-block w-100" data-src="holder.js/900x300?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide" alt="First slide [900x300]" src="assets/images/FOND900_800.png" data-holder-rendered="true">
+					<div class="carousel-caption d-none d-md-block"></div>
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" data-src="holder.js/900x300?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide" alt="Second slide [900x300]" src="assets/images/FOND900_800_2.png" data-holder-rendered="true">
+					<div class="carousel-caption d-none d-md-block"></div>
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" data-src="holder.js/900x300?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide" alt="Second slide [900x300]" src="assets/images/chauffeur-prive2.png" data-holder-rendered="true">
+					<div class="carousel-caption d-none d-md-block"></div>
+				</div>
+			</div>
+		</div>
 	</div>
-		{# <div style=" background-attachment: fixed, scroll; background-image: url('assets/images/network-4894813_1920.jpg');
-			        min-height: 350px;
-			        text-decoration: none;"> <div style="background: #300130;
-				background: -moz-linear-gradient(top, #300130 0%, #000000 100%);
-				background: -webkit-linear-gradient(top, #300130 0%, #000000 100%);
-				background: linear-gradient(to bottom, #300130 0%, #000000 100%);
-				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#300130', endColorstr='#000000',GradientType=0 );">
-			<section class="banniere d-flex flex-column" style="min-height:800px;">
-					</section> #}
+	{# <div style=" background-attachment: fixed, scroll; background-image: url('assets/images/network-4894813_1920.jpg');
+					        min-height: 350px;
+					        text-decoration: none;"> <div style="background: #300130;
+						background: -moz-linear-gradient(top, #300130 0%, #000000 100%);
+						background: -webkit-linear-gradient(top, #300130 0%, #000000 100%);
+						background: linear-gradient(to bottom, #300130 0%, #000000 100%);
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#300130', endColorstr='#000000',GradientType=0 );">
+					<section class="banniere d-flex flex-column" style="min-height:800px;">
+							</section> #}
 
-					{# -------card bianniere---------- #}
-<div style=" top: 0; heigth:650px; z-index: 99;" class="w-100 position-absolute d-flex justify-content-center p-5">
+	{# -------card bianniere---------- #}
+	<div style="margin:0; padding:0; top: 0; heigth:650px; z-index: 99;" class="w-100 position-absolute flex-column pt-5">
 
-<div class="card mt-5 w-50">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body text-center">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text .</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+		<div style="top: 300px;" class="card mb-5 w-50 m-auto">
+			<div class="card-header">
+				Featured
+			</div>
+			<div class="card-body text-center">
+				<h5 class="card-title">Special title treatment</h5>
+				<p class="card-text">With supporting text .</p>
+				<a href="#" class="btn btn-primary">Go somewhere</a>
+			</div>
+		</div>
+		<div style="z-index:200" ; class="wrapper w-100 mt-5">
+			<marquee behavior="alternate">
+				<span class="font-weight-bolder text-info hvr-pulse">Reservez votre chauffeur maintenent !</span>
+			</marquee>
+		</div>
+	</div>
 
-</div>
-				{% endblock %}
+
+{% endblock %}

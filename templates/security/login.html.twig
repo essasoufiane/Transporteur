@@ -21,10 +21,10 @@
 
 			<h1 class="h3 mb-3 font-weight-normal my-5 p-3">Merci de vous connecter
 			</h1>
-			<label class="bg-danger  text-white p-2" for="inputEmail">Votre adresse email
+			<label class=" text-white p-2" for="inputEmail">Votre adresse email
 			</label>
 			<input type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="merci de saisir votre adresse email" class="form-control" autocomplete="email" required autofocus>
-			<label for="inputPassword" class="bg- text-white p-2">Password</label>
+			<label for="inputPassword" class="text-white p-2">Password</label>
 			<input type="password" name="password" id="inputPassword" placeholder="merci de saisir votre mot de passe " class="form-control" autocomplete="current-password" required>
 
 			<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
