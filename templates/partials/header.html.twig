@@ -9,20 +9,20 @@
 					<ul class="navbar-nav mr-auto">
 
 						<li class="nav-item">
-							<a class="nav-link animate__flash animate__animated animate__delay-5s text-white" href="{{path('home_page')}}">
+							<a class="nav-link text-white" href="{{path('home_page')}}">
                                 <i class="fa fa-home"></i>
                                 Accueil
 							</a>
 						</li>
 							<li class="nav-item">
-							<a class="nav-link animate__flash animate__animated animate__delay-5s text-white" href="{{path('app_contact')}}">
+							<a class="nav-link text-white" href="{{path('app_contact')}}">
                                 <i class="fa fa-envelope"></i>
                                 Contact
 							</a>
 						</li>
 
 						<li class="nav-item">
-								<a class="nav-link animate__flash animate__animated animate__delay-5s text-white" href="{{path('app_order_new')}}"><i class="fa fa-car"></i> Commander une course</a>
+								<a class="nav-link text-white" href="{{path('app_order_new')}}"><i class="fa fa-car"></i> Commander une course</a>
 						</li>
 
                     </ul>
@@ -32,7 +32,7 @@
 
 							{% if is_granted('ROLE_ADMIN') %}
 							{# --------------admin menu--------------------- #}
-							<a class="nav-link dropdown-toggle animate__shakeY animate__animated animate__delay-5s text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							<a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-user"></i>
                                {{ app.user.lastname }}
                             </a>
@@ -44,7 +44,7 @@
 
 				{# -----------------------------menu user--------------------------------------------- #}
 							{% elseif is_granted('ROLE_USER') %}
-							<a class="nav-link dropdown-toggle animate__shakeY animate__animated animate__delay-5s text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							<a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-user"></i>
                                 {{ app.user.lastname }}
                             </a>
@@ -57,11 +57,11 @@
 							</div>
 							{% else %}
 
-							<a href="{{path('app_register')}}" class="text-white pr-3 animate__shakeY animate__animated animate__delay-5s text-white">
+							<a href="{{path('app_register')}}" class="text-white pr-3 text-white">
                                 <i class="fas fa-angle-right"></i>
                                 Inscription
                             </a>
-							<a href="{{path('app_login')}}" class="text-white animate__shakeY animate__animated animate__delay-5s text-white">
+							<a href="{{path('app_login')}}" class="text-white text-white">
                                 <i class="fas fa-angle-right"></i>
                                 Connexion
                             </a>
