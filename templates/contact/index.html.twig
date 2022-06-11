@@ -5,73 +5,78 @@
 {% block navbar %}{% endblock %}
 
 {% block body %}
-	{# formulaire  #}
-	<div class="site-section container my-5 w-75 bg-dark border  text-center text-white">
-		<div class="container my-5">
-			<div class="row my-5">
-				<div class="col-md-7 mb-5 my-5">
-
-					{{ form_start(form)}}
 
 
-					<div class="row form-group">
-						<div class="col-md-6 mb-3 mb-md-0">
-                            {{form_row(form.firstName, {'attr':{ 'class': 'form-control'}})}}
-                        </div>
-						<div class="col-md-6">
-                         {{form_row(form.lastName, {'attr':{ 'class': 'form-control'}})}}
-                        
-                        </div>
+
+
+
+			{# formulaire  #}
+			<div class="site-section container my-5 w-75 bg-dark border  text-center text-white">
+				<div class="container my-5">
+					<div class="row my-5">
+						<div class="col-md-7 mb-5 my-5">
+
+							{{ form_start(form)}}
+
+
+							<div class="row form-group">
+								<div class="col-md-6 mb-3 mb-md-0">
+									{{form_row(form.firstName, {'attr':{ 'class': 'form-control'}})}}
+								</div>
+								<div class="col-md-6">
+									{{form_row(form.lastName, {'attr':{ 'class': 'form-control'}})}}
+
+								</div>
+							</div>
+
+							<div class="row form-group">
+
+								<div class="col-md-12">
+									{{form_row(form.email, {'attr':{ 'class': 'form-control'}})}}
+								</div>
+							</div>
+							<div class="row form-group">
+
+								<div class="col-md-12">
+									{{form_row(form.message, {'attr':{ 'class': 'form-control'}})}}
+								</div>
+							</div>
+
+							<div class="row form-group">
+
+								<div class="col-md-12">
+									<input type="submit" class="btn btn-primary btn-block" value="Envoyer">
+
+								</div>
+							</div>
+
+
+							{{ form_end(form)}}
+
+						</div>
+						<div class="col-md-5 my-5 bg-dark border  text-center text-white">
+
+							<div
+								class="p-4 mb-3  my-5">
+								{# on affiche les données de contact crée dans le service yam  #}
+								<p class="mb-0 font-weight-bold ">Addresse</p>
+								<p class="mb-4">{{ contact_adress }}</p>
+
+								<p class="mb-0 font-weight-bold">Phone</p>
+								<p class="mb-4">
+									<a href="#">{{ contact_phone }}</a>
+								</p>
+
+								<p class="mb-0 font-weight-bold">Addresse email</p>
+								<p class="mb-0">
+									<a href="#">{{ contact_email }}</a>
+								</p>
+
+							</div>
+
+						</div>
 					</div>
-
-					<div class="row form-group">
-
-						<div class="col-md-12">
-                         {{form_row(form.email, {'attr':{ 'class': 'form-control'}})}}
-                        </div>
-					</div>
-                    	<div class="row form-group">
-
-						<div class="col-md-12">
-                         {{form_row(form.message, {'attr':{ 'class': 'form-control'}})}}
-                        </div>
-					</div>
-
-					<div class="row form-group">
-
-						<div class="col-md-12">
-                        <input type="submit" class="btn btn-primary btn-block" value="Envoyer">
-                        
-                        </div>
-					</div>
-
-					
-
-					{{ form_end(form)}}
-
-				</div>
-				<div class="col-md-5 my-5 bg-dark border  text-center text-white">
-
-					<div class="p-4 mb-3  my-5">
-						{# on affiche les données de contact crée dans le service yam  #}
-						<p class="mb-0 font-weight-bold">Addresse</p>
-						<p class="mb-4">{{ contact_adress }}</p>
-
-						<p class="mb-0 font-weight-bold">Phone</p>
-						<p class="mb-4">
-							<a href="#">{{ contact_phone }}</a>
-						</p>
-
-						<p class="mb-0 font-weight-bold">Addresse email</p>
-						<p class="mb-0">
-							<a href="#">{{ contact_email }}</a>
-						</p>
-
-					</div>
-
 				</div>
 			</div>
-		</div>
-	</div>
-{% endblock %}
-{% block footer %}{% endblock %}
+		{% endblock %}
+		{% block footer %}{% endblock %}

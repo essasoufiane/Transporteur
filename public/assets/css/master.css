@@ -1,3 +1,13 @@
+/* headeer */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@300&display=swap'); */
+.textfont{
+    font-family: 'Noto Sans HK';
+    font-size:x-large;
+  src: url(https://fonts.googleapis.com/css2?family=Noto+Sans+HK&display=swap);
+    
+   
+}
+
 .bg-opacity{
 background-color: rgba(234, 234, 224, 0.234);
 }
@@ -15,3 +25,28 @@ main{
 footer {
     opacity: 0.50;
 }
+
+
+/* ________ */
+
+
+
+.forme {
+    max-width: 600px;
+    margin: auto;
+    padding: 3rem 1rem;
+    background-color: #00000062 ;
+    border-radius:9px;
+    
+   
+    border-radius: 14px;
+  }
+
+  .btnvalider{
+    background-color: rgba(186, 133, 54, 0.95);
+border-color:rgb(106, 81, 6) ;
+  }
+
+  .inscrivezvous{
+    color: rgba(186, 133, 54, 0.95) ;
+  }

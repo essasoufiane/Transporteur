@@ -5,7 +5,7 @@
 
 {% block body %}
 
-	<div class="container w-50">
+	<div class="container w-50 my-5 w-25  border p-2  text-center text-white forme ">
 		<form method="post" class="w-100">
 			{% if error %}
 				<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -18,12 +18,12 @@
 					<a href="{{ path('app_logout') }}">Déconnection</a>
 				</div>
 			{% endif %}
-
-			<h1 class="h3 mb-3 font-weight-normal my-5 p-3">Merci de vous connecter
+<div  class=" container m-5">
+			<h1 class="h3 mb-3 font-weight-normal my-5 p-3 ">Merci de vous connecter
 			</h1>
 			<label class=" text-white p-2" for="inputEmail">Votre adresse email
 			</label>
-			<input type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="merci de saisir votre adresse email" class="form-control" autocomplete="email" required autofocus>
+			<input type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="merci de saisir votre adresse email" class=" inputshape form-control" autocomplete="email" required autofocus>
 			<label for="inputPassword" class="text-white p-2">Password</label>
 			<input type="password" name="password" id="inputPassword" placeholder="merci de saisir votre mot de passe " class="form-control" autocomplete="current-password" required>
 
@@ -38,9 +38,11 @@
 			</div>
 
 
-			<button class="btn btn-lg btn-success btn-block" type="submit">
+			<button class="btn btn-lg btnvalider btn-block p-2 my-5" type="submit">
 				Se connecter
 			</button>
 		</form>
+	</div>
+	
 	</div>
 {% endblock %}
