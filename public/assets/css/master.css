@@ -31,7 +31,7 @@ footer {
 
 
 
-.forme {
+.formulaires {
     max-width: 600px;
     margin: auto;
     padding: 3rem 1rem;
@@ -41,7 +41,10 @@ footer {
    
     border-radius: 14px;
   }
+.bg-color-form{
+     background-color: rgba(243, 210, 144, 0.519);
 
+}
   .btnvalider{
     background-color: rgba(186, 133, 54, 0.95);
 border-color:rgb(106, 81, 6) ;

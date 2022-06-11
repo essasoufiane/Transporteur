@@ -5,7 +5,7 @@
 
 {% block body %}
 
-	<div class="container w-50 my-5 w-25  border p-2  text-center text-white forme ">
+	<div class="container w-50 my-5 w-25  border p-2  text-center text-white formulaires ">
 		<form method="post" class="w-100">
 			{% if error %}
 				<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -18,7 +18,7 @@
 					<a href="{{ path('app_logout') }}">Déconnection</a>
 				</div>
 			{% endif %}
-<div  class=" container m-5">
+<div  class="mx-auto ">
 			<h1 class="h3 mb-3 font-weight-normal my-5 p-3 ">Merci de vous connecter
 			</h1>
 			<label class=" text-white p-2" for="inputEmail">Votre adresse email

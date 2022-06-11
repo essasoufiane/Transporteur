@@ -1,11 +1,14 @@
-<div class="container">
+<div class="container w-50 my-5 w-25  border p-2  text-center text-white formulaires ">
 {{ form_start(form) }}
 
-    <label class="text-center text-white mt-5">Adresse de départ</label>
+    <label class="text-center bg-color-form text-white mt-5">Adresse de départ</label>
     {{ form_widget(form.depart,   {'attr':{'class':'form form-control'}}) }}
-    {{ form_row(form.destination,   {'attr':{'class':'form form-control'}}) }}
-    {{ form_row(form.date_reservation, ) }}
-  
-    <button class="btn btn-success btn-block p-3 my-1 bold">{{ button_label|default('Enregistrer') }}</button>
+    <label class="text-center bg-color-form text-white mt-5">Destination</label>
+    {{ form_widget(form.destination,   {'attr':{'class':'form form-control'}}) }}
+    <label class="text-center bg-color-form text-white mt-5">Date reservation</label> 
+    <div  class="m-auto"  >
+  {{ form_widget(form.date_reservation, ) }}
+  </div>
+    <button class="btn btnvalider btn-block  text-white p-3 my-1 bold">{{ button_label|default('Enregistrer') }}</button>
 {{ form_end(form) }}
 </div>
