@@ -1,0 +1,17 @@
+.bg-opacity{
+background-color: rgba(234, 234, 224, 0.234);
+}
+
+.sizetext {
+    font-size:x-large;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+main{
+    min-height: 90vh;
+}
+
+footer {
+    opacity: 0.50;
+}
