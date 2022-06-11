@@ -18,11 +18,11 @@
 		<div class="header">
 			<div class="menu-circle"></div>
 			<div class="header-menu">
-				{# <a class="menu-link is-active" href="#">Accueil</a> #}
-				<a class="menu-link notify" href="#">Commander une course</a>
-				<a class="menu-link" href="#">Contact</a>
-				<a class="menu-link notify" href="#">Mon profil</a>
-				<a class="menu-link notify" href="#">Mes commandes</a>
+				<a class="menu-link is-active" href="{{path('home_page')}}">Accueil</a>
+				<a class="menu-link notify" href="{{path('app_order_new')}}">Commander une course</a>
+				<a class="menu-link" href="{{path('app_contact')}}">Contact</a>
+				<a class="menu-link notify" href="{{path('show_user')}}">Mon profil</a>
+				<a class="menu-link notify" href="{{path('show_order')}}">Mes commandes</a>
 			</div>
 
 			<div class="header-profile">
@@ -87,7 +87,8 @@
 				</div>
 			</div>
 			<div class="main-container">
-				<div class="main-header">
+			{# -----sous menu ---------- #}
+				{# <div class="main-header">
 					<p class="menu-link-main">Isy Drive</p>
 					<div class="header-menu">
 						<a class="main-header-link" href="#">Accueil</a>
@@ -95,7 +96,7 @@
 						<a class="main-header-link" href="#">Mon profil</a>
 
 					</div>
-				</div>
+				</div> #}
 				<div class="content-wrapper">
 					<div class="content-wrapper-header">
 						<div class="content-wrapper-context">
