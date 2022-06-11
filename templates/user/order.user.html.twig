@@ -1,41 +1,222 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Les réservations | example {% endblock %}
+{% block title %}Les réservations | example
+{% endblock %}
 
 {% block body %}
 
-    <table class="table mt-5">
-        <thead>
-            <tr>
-                <th>Identifiants </th>
-                <th>Depart</th>
-                <th>Destination</th>
-                <th>Date de réservation</th>
-                <th>Date de creation</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
+	<div class="video-bg">
+		<video width="320" height="240" autoplay loop muted>
+			<source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+	</div>
+	<div class="dark-light">
+		<svg viewbox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+			<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+	</div>
+	<div class="app">
+		<div class="header">
+			<div class="menu-circle"></div>
+			<div class="header-menu">
+				<a class="menu-link is-active" href="{{path('home_page')}}">Accueil</a>
+				<a class="menu-link notify" href="{{path('app_order_new')}}">Commander une course</a>
+				<a class="menu-link" href="{{path('app_contact')}}">Contact</a>
+				<a class="menu-link notify" href="{{path('show_user')}}">Mon profil</a>
+				<a class="menu-link notify" href="{{path('show_order')}}">Mes commandes</a>
+			</div>
 
-        {% for order in app.user.orders %}
-            <tr>
-                <td>{{ order.id }}</td>
-                <td>{{ order.depart }}</td>
-                <td>{{ order.destination }}</td>
-                <td>{{ order.dateReservation ? order.dateReservation|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ order.dateCreation ? order.dateCreation|date('Y-m-d H:i:s') : '' }}</td>
-                <td>
-                    <a href="{{ path('app_order_show', {'id': order.id}) }}">Voir plus de details</a>
-                    <a href="{{ path('app_order_edit', {'id': order.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">Il n'y a aucune commade acutuellement !👌 </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+			<div class="header-profile">
+				<div class="notification">
+					<span class="notification-number">3</span>
+					<svg viewbox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell">
+						<path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/>
+					</svg>
+				</div>
+				<svg viewbox="0 0 512 512" fill="currentColor">
+					<path d="M448.773 235.551A135.893 135.893 0 00451 211c0-74.443-60.557-135-135-135-47.52 0-91.567 25.313-115.766 65.537-32.666-10.59-66.182-6.049-93.794 12.979-27.612 19.013-44.092 49.116-45.425 82.031C24.716 253.788 0 290.497 0 331c0 7.031 1.703 13.887 3.006 20.537l.015.015C12.719 400.492 56.034 436 106 436h300c57.891 0 106-47.109 106-105 0-40.942-25.053-77.798-63.227-95.449z"/>
+				</svg>
+				<img class="profile-img" src="https://images.unsplash.com/photo-1600353068440-6361ef3a86e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="">
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="left-side">
+				<div class="side-wrapper">
+					<div class="side-wrapper">
+						<div class="side-title">Présentation</div>
+						<div class="side-menu">
+							<a href="#">
+								Mon histoire...
+							</a>
+							<a href="#">
+								Mes véhicules
+							</a>
+							<a href="#">
+								Vos avis
+							</a>
 
-    <a href="{{ path('app_order_new') }}">Commander une course</a>
-{% endblock %}
+						</div>
+					</div>
+					<div class="side-title">Services</div>
+					<div class="side-menu">
+						<a href="#">
+
+
+							Mise à disposition
+						</a>
+						<a href="#">
+
+							Chauffeur Privée
+						</a>
+						<a href="#">
+
+							Visite des chateaux
+						</a>
+						<a href="#">+8 personnes</a>
+						<a href="#">Aéroports & Gares</a>
+					</div>
+				</div>
+				<div class="side-wrapper">
+					<div class="side-title">Légal</div>
+					<div class="side-menu">
+						<a href="#">
+							Mentions légals
+						</a>
+						<a href="#">Conditions générales</a>
+						<a href="#">A propos</a>
+					</div>
+				</div>
+			</div>
+			<div class="main-container">
+				{# -----sous menu ---------- #}
+				{# <div class="main-header">
+																	<p class="menu-link-main">Isy Drive</p>
+																	<div class="header-menu">
+																		<a class="main-header-link" href="#">Accueil</a>
+																		<a class="main-header-link is-active" href="#">Mes commandes</a>
+																		<a class="main-header-link" href="#">Mon profil</a>
+												
+																	</div>
+																</div> #}
+
+					<div class="content-section text-white"> <div class="content-section-title">Installed</div>
+					<ul>
+						<li class="adobe-product">
+							<div class="products">Identifiant
+							</div>
+							<div class="products">Depart
+							</div>
+							<span class="status">Destination
+							</span>
+							<span class="status">Date de départ
+							</span>
+							<span class="status">Date de réservation
+							</span>
+						</li>
+                        				{% for order in app.user.orders %}
+
+						<li class="adobe-product">
+							<div class="products">{{ order.id }}
+							</div>
+							<div class="products">{{ order.depart }}
+							</div>
+							<span class="status">{{ order.destination }}
+							</span>
+							<span class="status">{{ order.dateReservation ? order.dateReservation|date('Y-m-d H:i:s') : '' }}
+							</span>
+							<span class="status">{{ order.dateCreation ? order.dateCreation|date('Y-m-d H:i:s') : '' }}
+							</span>
+
+						</li>
+                        				{% else %}
+						<li class="adobe-product">
+							<div class="products">Il n'y a aucune commade acutuellement !
+							</div>
+
+						</li>
+                        				{% endfor %}
+
+
+						
+					</ul>
+				</div>
+				<div class="content-section">
+					<div class="content-section-title"></div>
+					{# <div class="apps-card">
+																								<div class="app-card">
+																									<span>
+																										CONCIERGERIE
+																									</span>
+																									<div class="app-card__subtext">VTC Ricardo Excellence, votre chauffeur privé à Toulouse, vous présente différentes prestations de conciergerie. Où que vous soyez dans la Haute Garonne, faites appel à vore chauffeur pour tous vos besoins.</div>
+																									<div class="app-card-buttons">
+																									<img src="https://vtcexcellence.com/wp-content/uploads/2021/05/VTC-EXCELLENCE-SERVICE-CONCIERGERIE.jpg" alt="">
+																										<button class="content-button status-button">Update</button>
+																										<div class="menu"></div>
+																									</div>
+																								</div>
+																								<div class="app-card">
+																									<span>
+																										MISE A DISPOSITION
+																									</span>
+																									<div class="app-card__subtext">Vous souhaitez vous déplacer librement et profiter d’un service de transport haut de gamme à Toulouse? VTC Ricardo Excellence vous propose de louer un véhicule avec ou sans chauffeur.</div>
+																									<div class="app-card-buttons">
+																									<img src="https://vtcexcellence.com/wp-content/uploads/2021/05/VTC-Toulouse-Chauffeur-jpg.jpg" alt="#">
+																										<button class="content-button status-button">Update</button>
+																										<div class="menu"></div>
+																									</div>
+																								</div>
+																								<div class="app-card">
+																									<span>
+																										SERVICE AU KM
+																									</span>
+																									<div class="app-card__subtext">Votre VTC propose ses services pour les professionnels. Que vous ayez besoin de vous rendre à un rendez-vous, à l'aéroport ou à une réunion, VTC Ricardo Excellence vous assure la ponctualité.</div>
+																									<div class="app-card-buttons">
+																										<button class="content-button status-button">Update</button>
+																										<img src="https://vtcexcellence.com/wp-content/uploads/2021/05/louer-un-vehicule-avec-chauffeur-a-toulouse-1.jpg" alt="#">
+																										<div class="menu"></div>
+																									</div>
+																								</div>
+																							</div> #}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="overlay-app"></div>
+</div>
+{# 
+		<table class="table mt-5">
+			<thead>
+				<tr>
+					<th>Identifiants
+					</th>
+					<th>Depart</th>
+					<th>Destination</th>
+					<th>Date de réservation</th>
+					<th>Date de creation</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+	
+				{% for order in app.user.orders %}
+					<tr>
+						<td>{{ order.id }}</td>
+						<td>{{ order.depart }}</td>
+						<td>{{ order.destination }}</td>
+						<td>{{ order.dateReservation ? order.dateReservation|date('Y-m-d H:i:s') : '' }}</td>
+						<td>{{ order.dateCreation ? order.dateCreation|date('Y-m-d H:i:s') : '' }}</td>
+						<td>
+							<a href="{{ path('app_order_show', {'id': order.id}) }}">Voir plus de details</a>
+							<a href="{{ path('app_order_edit', {'id': order.id}) }}">edit</a>
+						</td>
+					</tr>
+				{% else %}
+					<tr>
+						<td colspan="6">Il n'y a aucune commade acutuellement !👌
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table> #}
+
+{# <a href="{{ path('app_order_new') }}">Commander une course</a> #}{% endblock %}
