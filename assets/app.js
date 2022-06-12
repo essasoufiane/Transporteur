@@ -97,15 +97,23 @@ $(function () {
   console.log(monBtnMenu);
 
 	var monContainer = document.querySelector(".main-header");
-
+// var btnFermer = document.querySelector(".fas fa-times");
+// var btnOuvert = document.querySelector(".fas fa-bars");
+var btnOuvert = document.querySelector("body");
 	
 	if( monContainer.classList.contains('menuOuvert') ){
 		// si menu fermé :
 		monContainer.classList.remove('menuOuvert');
+		btnOuvert.classList.add('men');
+    // btnOuvert.classList.add('menuOuvert');
+    // btnFermer.classList.remove('menuOuvert');
 	}
 	else {
 		// si menu ouvert :
 		monContainer.classList.add('menuOuvert');
+    btnOuvert.classList.remove('men');
+    // btnOuvert.classList.remove('menuOuvert');
+    // btnFermer.classList.add('menuOuvert');
 	}
 
 });
