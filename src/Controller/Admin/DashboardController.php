@@ -2,11 +2,12 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Contact;
 use App\Entity\User;
 use App\Entity\Order;
+use App\Entity\Contact;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
@@ -29,13 +30,23 @@ class DashboardController extends AbstractDashboardController
         return $this->redirect($url); 
 
     }
-
+    
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
             ->setTitle('TRANSPORTEUR ');
     }
-
+    // ---------------------------- pour override le paramétrage du champ ID et utiliser le template
+    //   admin/field/id_with_icon.html.twig ------------------------------------------------------------------------------------
+    
+    // public function configureCrud(): Crud
+    // {
+    //     return parent::configureCrud()
+    //         ->overrideTemplate('crud/field/id', 'admin/field/id_with_icon.html.twig');
+    // }
+    // -----------------------------------------------------------------------------------------
+   
+   
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
