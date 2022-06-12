@@ -17,12 +17,16 @@
 	<div class="app">
 		<div class="header">
 			<div class="menu-circle"></div>
+				<a class="menuSelector mob text-white">
+		<i class="fas fa-bars"></i>
+		<i class="fas fa-times"></i>
+	</a>
 			<div class="header-menu">
-				<a class="menu-link is-active" href="{{path('home_page')}}">Accueil</a>
-				<a class="menu-link notify" href="{{path('app_order_new')}}">Commander une course</a>
-				<a class="menu-link" href="{{path('app_contact')}}">Contact</a>
-				<a class="menu-link notify" href="{{path('show_user')}}">Mon profil</a>
-				<a class="menu-link notify" href="{{path('show_order')}}">Mes commandes</a>
+				<a class="menu-link is-active desk" href="{{path('home_page')}}">Accueil</a>
+				<a class="menu-link notify desk" href="{{path('app_order_new')}}">Commander une course</a>
+				<a class="menu-link desk" href="{{path('app_contact')}}">Contact</a>
+				<a class="menu-link notify desk" href="{{path('show_user')}}">Mon profil</a>
+				<a class="menu-link notify desk" href="{{path('show_order')}}">Mes commandes</a>
 				{# <a class="menu-link notify" href="{{path('templates/APIMETO/index.php')}}">Météo</a> #}
 				
 			</div>

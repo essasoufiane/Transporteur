@@ -88,3 +88,24 @@ $(function () {
    toggleButton.addEventListener('click', () => {
      document.body.classList.toggle('light-mode');
    });
+
+  //  ----header----
+
+  var monBtnMenu = document.querySelector(".menuSelector");
+  
+  monBtnMenu.addEventListener("click", function(){
+  console.log(monBtnMenu);
+
+	var monContainer = document.querySelector(".content-wrapper-context");
+
+	
+	if( !monContainer.classList.contains('menuOuvert') ){
+		// si menu fermé :
+		monContainer.classList.add('menuOuvert');
+	}
+	else {
+		// si menu ouvert :
+		monContainer.classList.remove('menuOuvert');
+	}
+
+});
