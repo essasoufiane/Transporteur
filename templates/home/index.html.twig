@@ -23,6 +23,8 @@
 				<a class="menu-link" href="{{path('app_contact')}}">Contact</a>
 				<a class="menu-link notify" href="{{path('show_user')}}">Mon profil</a>
 				<a class="menu-link notify" href="{{path('show_order')}}">Mes commandes</a>
+				{# <a class="menu-link notify" href="{{path('templates/APIMETO/index.php')}}">Météo</a> #}
+				
 			</div>
 
 			<div class="header-profile">
@@ -44,10 +46,10 @@
 					<div class="side-wrapper">
 						<div class="side-title">Présentation</div>
 						<div class="side-menu">
-							<a href="#">
-								Mon histoire...
+							<a href="{{ path('histoire') }}">
+								{{histoire}}
 							</a>
-							<a href="#">
+							<a href="{{ path('vehicules') }}">
 								Mes véhicules
 							</a>
 							<a href="#">
