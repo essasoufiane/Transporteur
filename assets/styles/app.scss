@@ -857,3 +857,28 @@ body.light-mode .video-bg:before {
  background: var(--scrollbar-bg);
  border-radius: 10px;
 }
+
+// ----Header-----
+@media screen and (max-width: 1050px) {
+.desk{
+  display: none;
+}
+ }
+@media screen and (min-width: 1050px) {
+.mob{
+  display: none;
+}
+ }
+
+.menuSelector{
+  font-size: 2em;
+}
+
+.menuOuvert{
+  display: none;
+}
+
+.men .fa-times { display: block; }
+.men .fa-bars { display: none; }
+
+.fa-times { display: none; }
