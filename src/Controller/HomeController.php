@@ -95,5 +95,33 @@ class HomeController extends AbstractController
           
         ]);
     }
+    // a propos template/legales
+    #[Route('/apropos', name: 'apropos')]
+    public function Apropos(): Response
+    {  
+        return $this->render('navleft/legales/apropos.html.twig', [
+            'controller_name' => 'HomeController',
+          
+        ]);
+    }
+    // mentions legales 
+    #[Route('/mentionslegales', name: 'mentionslegales')]
+    public function MentionsLegales(): Response
+    {  
+        return $this->render('navleft/legales/mentionslegales.html.twig', [
+            'controller_name' => 'HomeController',
+          
+        ]);
+    }
+    // condition générales router =>conditionsgenerales
+    #[Route('/conditionsgenerales', name: 'conditionsgenerales')]
+    public function ConditionsGenerales(): Response
+    {  
+        return $this->render('navleft/legales/conditionsgenerales.html.twig', [
+            'controller_name' => 'HomeController',
+          
+        ]);
+    }
+   
 
 }
