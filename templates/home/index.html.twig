@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block body %}
-	<div class="video-bg">
+	{# <div class="video-bg">
 		<video width="320" height="240" autoplay loop muted>
 			<source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
 			Your browser does not support the video tag.
@@ -39,55 +39,12 @@
 				</svg>
 				<img class="profile-img" src="https://images.unsplash.com/photo-1600353068440-6361ef3a86e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="">
 			</div>
-		</div>
+		</div> #}
+		{% include "partials/header1.html.twig" %}
 		<div class="wrapper">
 			<div class="left-side">
-				<div class="side-wrapper">
-					<div class="side-wrapper">
-						<div class="side-title">Présentation</div>
-						<div class="side-menu">
-							<a href="{{ path('histoire') }}">
-								Mon histoire...
-							</a>
-							<a href="{{ path('vehicules') }}">
-								Mes véhicules
-							</a>
-							<a href="{{ path('avis') }}">
-								Vos avis
-							</a>
+			{% include "partials/footer1.html.twig" %}
 
-						</div>
-					</div>
-					<div class="side-title">Services</div>
-					<div class="side-menu">
-						<a href="{{ path('disposition') }}">
-
-
-							Mise à disposition
-						</a>
-						<a href="{{ path('chauffeur') }}">
-
-							Chauffeur Privée
-						</a>
-						<a href="{{ path('visite') }}">
-
-							Visite des chateaux
-						</a>
-						<a href="{{ path('personne') }}">+8 personnes</a>
-						<a href="{{ path('aeroport_gare') }}">Aéroports & Gares</a>
-					</div>
-				</div>
-				<div class="side-wrapper">
-					<div class="side-title">Légal</div>
-					<div class="side-menu">
-					<a href="{{ path('mentionslegales') }}">
-							Mentions légals
-						</a>
-						<a href="{{ path('conditionsgenerales') }}">Conditions générales</a>
-						<a href="{{ path('apropos') }}">A propos</a>
-					</div>
-				</div>
-			</div>
 			<div class="main-container">
 			{# -----sous menu ---------- #}
 				{# <div class="main-header">
