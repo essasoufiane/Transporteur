@@ -99,7 +99,7 @@ $(function () {
 	var monContainer = document.querySelector(".main-header");
 
 	
-	if( !monContainer.classList.contains('menuOuvert') ){
+	if( monContainer.classList.contains('menuOuvert') ){
 		// si menu fermé :
 		monContainer.classList.remove('menuOuvert');
 	}
