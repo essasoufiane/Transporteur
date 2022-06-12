@@ -23,6 +23,7 @@ class HomeController extends AbstractController
           
         ]);
     }
+    // route histoire et render du template 
     #[Route('/histoire', name: 'histoire')]
     public function histoireIzyDrive(): Response
     {  
@@ -31,7 +32,7 @@ class HomeController extends AbstractController
           
         ]);
     }
-
+    // route vehicules et render ............
     #[Route('/vehicules', name: 'vehicules')]
     public function IzyDriveCars(): Response
     {  
@@ -40,10 +41,56 @@ class HomeController extends AbstractController
           
         ]);
     }
+    // route les avis clients et template 
     #[Route('/avis', name: 'avis')]
     public function IzyDriveNotices(): Response
     {  
         return $this->render('navleft/presentations/avis.html.twig', [
+            'controller_name' => 'HomeController',
+          
+        ]);
+    }
+    // route dans sous dossier Services/disposition et le render 
+    #[Route('/disposition', name: 'disposition')]
+    public function IzyDriveDisposition(): Response
+    {  
+        return $this->render('navleft/services/disposition.html.twig', [
+            'controller_name' => 'HomeController',
+            
+        ]);
+    }
+    // route de chaufferprivée 
+    #[Route('/chauffeur', name: 'chauffeur')]
+    public function IzyDriveChauffeur(): Response
+    {  
+        return $this->render('navleft/services/chauffeur.html.twig', [
+            'controller_name' => 'HomeController',
+          
+        ]);
+    }
+    // route visite dans services 
+    #[Route('/visite', name: 'visite')]
+    public function IzyDriveVisite(): Response
+    {  
+        return $this->render('navleft/services/visite.html.twig', [
+            'controller_name' => 'HomeController',
+          
+        ]);
+    }
+    // route pour personne template/services/personne.html.twig 
+    #[Route('/personne', name: 'personne')]
+    public function IzyDrivePersonnePass(): Response
+    {  
+        return $this->render('navleft/services/personne.html.twig', [
+            'controller_name' => 'HomeController',
+          
+        ]);
+    }
+    // route template aeroport_gare 
+    #[Route('/aeroport_gare', name: 'aeroport_gare')]
+    public function IzyDriveAeroGare(): Response
+    {  
+        return $this->render('navleft/services/aeroport_gare.html.twig', [
             'controller_name' => 'HomeController',
           
         ]);
