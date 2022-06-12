@@ -7,7 +7,7 @@
 	<div class="video-bg">
 		<video width="320" height="240" autoplay loop muted>
 			<source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
-		
+			Your browser does not support the video tag.
 		</video>
 	</div>
 	<div class="dark-light">
@@ -17,12 +17,16 @@
 	<div class="app">
 		<div class="header">
 			<div class="menu-circle"></div>
+				<a class="menuSelector mob text-white">
+		<i class="fas fa-bars"></i>
+		<i class="fas fa-times"></i>
+	</a>
 			<div class="header-menu">
-				<a class="menu-link is-active" href="{{path('home_page')}}">Accueil</a>
-				<a class="menu-link notify" href="{{path('app_order_new')}}">Commander une course</a>
-				<a class="menu-link" href="{{path('app_contact')}}">Contact</a>
-				<a class="menu-link notify" href="{{path('show_user')}}">Mon profil</a>
-				<a class="menu-link notify" href="{{path('show_order')}}">Mes commandes</a>
+				<a class="menu-link is-active desk" href="{{path('home_page')}}">Accueil</a>
+				<a class="menu-link notify desk" href="{{path('app_order_new')}}">Commander une course</a>
+				<a class="menu-link desk" href="{{path('app_contact')}}">Contact</a>
+				<a class="menu-link notify desk" href="{{path('show_user')}}">Mon profil</a>
+				<a class="menu-link notify desk" href="{{path('show_order')}}">Mes commandes</a>
 				{# <a class="menu-link notify" href="{{path('templates/APIMETO/index.php')}}">Météo</a> #}
 				
 			</div>
@@ -60,7 +64,11 @@
 					</div>
 					<div class="side-title">Services</div>
 					<div class="side-menu">
+<<<<<<< HEAD
 							<a href="{{ path('disposition') }}">
+=======
+						
+>>>>>>> 8e919da8f62e26042cef3a96e15d7273a36daa16
 
 
 							Mise à disposition
@@ -74,7 +82,11 @@
 							Visite des chateaux
 						</a>
 						<a href="{{ path('personne') }}">+8 personnes</a>
+<<<<<<< HEAD
 						<a href="{{ path('aeroport_gare') }}">Aéroports & Gares</a>>
+=======
+						<a href="{{ path('aeroport_gare') }}">Aéroports & Gares</a>
+>>>>>>> 8e919da8f62e26042cef3a96e15d7273a36daa16
 					</div>
 				</div>
 				<div class="side-wrapper">
@@ -90,7 +102,7 @@
 			</div>
 			<div class="main-container">
 			{# -----sous menu ---------- #}
-				{# <div class="main-header">
+				<div class="main-header menuOuvert">
 					<p class="menu-link-main">Isy Drive</p>
 					<div class="header-menu">
 						<a class="main-header-link" href="#">Accueil</a>
@@ -98,7 +110,7 @@
 						<a class="main-header-link" href="#">Mon profil</a>
 
 					</div>
-				</div> #}
+				</div>
 				<div class="content-wrapper">
 					<div class="content-wrapper-header">
 						<div class="content-wrapper-context">
