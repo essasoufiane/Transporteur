@@ -96,16 +96,16 @@ $(function () {
   monBtnMenu.addEventListener("click", function(){
   console.log(monBtnMenu);
 
-	var monContainer = document.querySelector(".content-wrapper-context");
+	var monContainer = document.querySelector(".main-header");
 
 	
 	if( !monContainer.classList.contains('menuOuvert') ){
 		// si menu fermé :
-		monContainer.classList.add('menuOuvert');
+		monContainer.classList.remove('menuOuvert');
 	}
 	else {
 		// si menu ouvert :
-		monContainer.classList.remove('menuOuvert');
+		monContainer.classList.add('menuOuvert');
 	}
 
 });
