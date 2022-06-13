@@ -8,6 +8,7 @@
 			{# ----header desktop--- #}
 	<div class="app">
 		{% include "partials/header1.html.twig" %}
+	
 		<div class="wrapper">
 			<div class="left-side">
 
@@ -20,9 +21,11 @@
 			{# -----header mobile---------- #}
 			<div class="main-container">
 				{% include "partials/headermobile.html.twig" %}
-
+			</div>
+				
 				{# ----formulaire --- #}
-				<div class="container my-5 w-25 bg-dark border  text-center text-white ">
+				
+				<div class="container my-5 w-75 bg-dark border text-center text-white">
 					<h1 class="container my-5 ">Inscrivez-vous !
 					</h1>
 					{{ form_start(registrationForm) }}
@@ -32,13 +35,11 @@
 					{{ form_row(registrationForm.email,  {'attr':{'class':'form form-control'}}) }}
 					{{ form_row(registrationForm.adresse,  {'attr':{'class':'form form-control'}}) }}
 					{{ form_row(registrationForm.age,  {'attr':{'class':'form form-control'}}) }}
-					{{ form_row(registrationForm.plainPassword,   {'attr':{'class':'form form-control'}})
-													        }}
+					{{ form_row(registrationForm.plainPassword,   {'attr':{'class':'form form-control'}}) }}
 
-					<button type="submit" class="btn btn-success btn-block p-2 my-5">S'inscrire</button>
+					<button type="submit" class="btn btn-success btn-block">S'inscrire</button>
 					{{ form_end(registrationForm) }}
 				</div>
-			</div>
 		</div>
 	</div>
 	{#  #}
