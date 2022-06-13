@@ -1,45 +1,25 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Page Accueil | Home
+{% block title %}Log in!
 {% endblock %}
 
 {% block body %}
-	<div class="video-bg">
-		<video width="320" height="240" autoplay loop muted>
-			<source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-		</video>
-	</div>
-	<div class="dark-light">
-		<svg viewbox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-			<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-	</div>
 
 	{# ----header desktop--- #}
 	<div class="app">
 		{% include "partials/header1.html.twig" %}
-		{# ----navbar left--- #}
 		<div class="wrapper">
 			<div class="left-side">
+			{# ----navbar left--- #}
 				<div class="side-wrapper">
 					{% include "partials/navleft.html.twig" %}
 				</div>
 			</div>
-
-			{# -----header mobile ---------- #}
+	{# -----header mobile---------- #}
 			<div class="main-container">
 				{% include "partials/headermobile.html.twig" %}
 
-				<div class="content-wrapper">
-					<div class="content-wrapper-header">
-						{# <div class="content-wrapper-context container">
-							<h1 class="container text-center ">Inscrivez-vous
-							</h1>
-						</div> #}
-					</div>
-			
-				{# formulaire inscription  #}
-				<div class="container w-75 ">
+				<div class="container w-50 ">
 
 					<form method="post" class="w-100">
 						{% if error %}
@@ -73,16 +53,12 @@
 						</div>
 
 
-						<button class="btn btn-lg btn-success btn-block my-2" type="submit">
+						<button class="btn btn-lg btn-success btn-block" type="submit">
 							Se connecter
 						</button>
 					</form>
 				</div>
-				{# fin du foàrmulaire  #}
-
-
-			
-
-		<div class="overlay-app"></div>
+			</div>
+		</div>
 	</div>
-</div>{% endblock %}
+{% endblock %}
