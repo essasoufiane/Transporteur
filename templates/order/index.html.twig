@@ -3,7 +3,19 @@
 {% block title %}Les réservations | example {% endblock %}
 
 {% block body %}
-
+{# ----header desktop--- #}
+	<div class="app">
+		{% include "partials/header1.html.twig" %}
+		<div class="wrapper">
+			<div class="left-side">
+			{# ----navbar left--- #}
+				<div class="side-wrapper">
+					{% include "partials/navleft.html.twig" %}
+				</div>
+			</div>
+            {# -----header mobile---------- #}
+			<div class="main-container">
+				{% include "partials/headermobile.html.twig" %}
     <h1>Order index</h1>
 
     <table class="table">
@@ -39,5 +51,7 @@
     </table>
 
     <a href="{{ path('app_order_new') }}">Créer une commande</a>
-
+</div>
+</div>
+</div>
 {% endblock %}
