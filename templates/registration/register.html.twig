@@ -32,11 +32,12 @@
 
 				<div class="content-wrapper">
 					<div class="content-wrapper-header">
-						<div class="content-wrapper-context">Daouda</div>
+						<div class="content-wrapper-context container"><h1 class="container text-center ">Inscrivez-vous 
+					</h1></div>
 					</div>
 
 					{# formulaire inscription  #}
-
+{{ form_start(registrationForm) }}
 			{{ form_row(registrationForm.firstname,  {'attr':{'class':'form form-control'}}) }}
 					{{ form_row(registrationForm.lastname,  {'attr':{'class':'form form-control'}}) }}
 					{{ form_row(registrationForm.email,  {'attr':{'class':'form form-control'}}) }}
@@ -46,7 +47,7 @@
 													        }}
 
 					<button type="submit" class="btn btn-success btn-block p-2 my-5">S'inscrire</button>
-
+{{ form_end(registrationForm) }}
 				{# fin du foàrmulaire  #}
 
 
