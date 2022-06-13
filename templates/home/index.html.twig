@@ -17,16 +17,12 @@
 	<div class="app">
 		<div class="header">
 			<div class="menu-circle"></div>
-				<a class="menuSelector mob text-white">
-		<i class="fas fa-bars"></i>
-		<i class="fas fa-times"></i>
-	</a>
 			<div class="header-menu">
-				<a class="menu-link is-active desk" href="{{path('home_page')}}">Accueil</a>
-				<a class="menu-link notify desk" href="{{path('app_order_new')}}">Commander une course</a>
-				<a class="menu-link desk" href="{{path('app_contact')}}">Contact</a>
-				<a class="menu-link notify desk" href="{{path('show_user')}}">Mon profil</a>
-				<a class="menu-link notify desk" href="{{path('show_order')}}">Mes commandes</a>
+				<a class="menu-link is-active" href="{{path('home_page')}}">Accueil</a>
+				<a class="menu-link notify" href="{{path('app_order_new')}}">Commander une course</a>
+				<a class="menu-link" href="{{path('app_contact')}}">Contact</a>
+				<a class="menu-link notify" href="{{path('show_user')}}">Mon profil</a>
+				<a class="menu-link notify" href="{{path('show_order')}}">Mes commandes</a>
 				{# <a class="menu-link notify" href="{{path('templates/APIMETO/index.php')}}">Météo</a> #}
 				
 			</div>
@@ -69,11 +65,11 @@
 
 							Mise à disposition
 						</a>
-						<a href="{{ path('chauffeur') }}">
+						<a href="#">
 
 							Chauffeur Privée
 						</a>
-						<a href="{{ path('visite') }}">
+						<a href="#">
 
 							Visite des chateaux
 						</a>
@@ -84,17 +80,17 @@
 				<div class="side-wrapper">
 					<div class="side-title">Légal</div>
 					<div class="side-menu">
-					<a href="{{ path('mentionslegales') }}">
+						<a href="#">
 							Mentions légals
 						</a>
-						<a href="{{ path('conditionsgenerales') }}">Conditions générales</a>
-						<a href="{{ path('apropos') }}">A propos</a>
+						<a href="#">Conditions générales</a>
+						<a href="#">A propos</a>
 					</div>
 				</div>
 			</div>
 			<div class="main-container">
 			{# -----sous menu ---------- #}
-				<div class="main-header menuOuvert">
+				{# <div class="main-header">
 					<p class="menu-link-main">Isy Drive</p>
 					<div class="header-menu">
 						<a class="main-header-link" href="#">Accueil</a>
@@ -102,7 +98,7 @@
 						<a class="main-header-link" href="#">Mon profil</a>
 
 					</div>
-				</div>
+				</div> #}
 				<div class="content-wrapper">
 					<div class="content-wrapper-header">
 						<div class="content-wrapper-context">
