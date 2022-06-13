@@ -11,6 +11,8 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
+
 
 class DashboardController extends AbstractDashboardController
 {
@@ -43,7 +45,11 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-user', User::class);
         yield MenuItem::linkToCrud('Réservations', 'fas fa-car', Order::class);
         yield MenuItem::linkToCrud('Messages reçus', 'fa fa-envelope', Contact::class);
-
-      
+    }
+    public function configureAssets(): Assets
+    {
+        return Assets::new()->addCssFile('css/admin.css');
+        return Assets::new()->addCssFile('css/all.min.css');
+        return Assets::new()->addCssFile('css/sb-admin-2.min.css');
     }
 }

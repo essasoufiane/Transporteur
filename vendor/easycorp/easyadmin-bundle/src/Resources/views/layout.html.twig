@@ -166,7 +166,7 @@
 									<a
 										class="user-details" type="button" data-bs-toggle="dropdown" data-bs-offset="0,5" aria-expanded="false">
 										{# to make the site design consistent, always display the user avatar in responsive header
-																																								                                   and hide the user name (because there's no space left) regardless of the user config #}
+																																																												                                   and hide the user name (because there's no space left) regardless of the user config #}
 										{% if ea.userMenu.avatarDisplayed %}
 											{{ user_menu_avatar }}
 										{% else %}
@@ -352,34 +352,10 @@
 												</section>
 											{% endif %}
 										{% endblock %}
-										{# ----------------------------------------------- graphique #}
-										<div class="test col-xl-8 col-lg-7">
-											<div
-												class="card shadow mb-4">
-												<!-- Card Header - Dropdown -->
-												<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-													<h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-													<div class="dropdown no-arrow">
-														<a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-															<i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-														</a>
-														<div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-															<div class="dropdown-header">Dropdown Header:</div>
-															<a class="dropdown-item" href="#">Action</a>
-															<a class="dropdown-item" href="#">Another action</a>
-															<div class="dropdown-divider"></div>
-															<a class="dropdown-item" href="#">Something else here</a>
-														</div>
-													</div>
-												</div>
-												<!-- Card Body -->
-												<div class="card-body">
-													<div class="chart-area">
-														<canvas id="myAreaChart"></canvas>
-													</div>
-												</div>
-											</div>
-										</div>
+										{# ----------------------------------------------- graphique---------------------------------------- #}
+<div>
+  <canvas id="myChart"></canvas>
+</div>
 
 									</article>
 								{% endblock content %}
@@ -398,22 +374,40 @@
 					{{ htmlContent|raw }}
 				{% endfor %}
 			{% endblock %}
-			<!-- Bootstrap core JavaScript-->
-			<script src="vendor/jquery/jquery.min.js"></script>
-			<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const labels = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+  ];
 
-			<!-- Core plugin JavaScript-->
-			<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: 'My First dataset',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 5, 2, 20, 30, 45],
+    }]
+  };
 
-			<!-- Custom scripts for all pages-->
-			<script src="js/sb-admin-2.min.js"></script>
+  const config = {
+    type: 'line',
+    data: data,
+    options: {}
+  };
+</script>
+<script>
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+</script>
 
-			<!-- Page level plugins -->
-			<script src="vendor/chart.js/Chart.min.js"></script>
-
-			<!-- Page level custom scripts -->
-			<script src="js/demo/chart-area-demo.js"></script>
-			<script src="js/demo/chart-pie-demo.js"></script>
 
 		</body>
 	{% endblock body %}
