@@ -32,9 +32,11 @@
 
 				<div class="content-wrapper">
 					<div class="content-wrapper-header">
-						<h1>Daouda
+						<h1 class="container text-center ">Contactez-nous !
 						</h1>
 					</div>
+
+					{# formulaire  #}
 					<div class="row form-group">
 						<div class="col-md-6 mb-3 mb-md-0">
 							{{form_row(form.firstName, {'attr':{ 'class': 'form-control'}})}}
@@ -65,11 +67,14 @@
 
 						</div>
 					</div>
-					<div
-						class="p-4 mb-3  my-5">
-						{# on affiche les données de contact crée dans le service yam  #}
-						<div class="border  text-center text-white">
-							<p class="mb-0 font-weight-bold">Addresse</p>
+					<h1 class="container text-center ">Ou contacter via!
+						</h1>
+					<div class=" my-5 border  text-center text-white">
+
+						<div
+							class="p-4 mb-3  my-5">
+							{# on affiche les données de contact crée dans le service yam  #}
+							<p class="mb-0 font-weight-bold">Adresse</p>
 							<p class="mb-4">{{ contact_adress }}</p>
 
 							<p class="mb-0 font-weight-bold">Phone</p>
@@ -85,13 +90,8 @@
 						</div>
 
 					</div>
-				</div>
 
-			</div>
+					<div class="overlay-app">
 
-			{# contactet par mail ou téléphone  #}
 
-			<div class="overlay-app"></div>
-		</div>
-
-	{% endblock %}
+					{% endblock %}
