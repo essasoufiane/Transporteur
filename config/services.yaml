@@ -8,6 +8,7 @@ parameters:
     app.contact.subject: 'contact form | message'
     app.contact.adress: '250 Route du Rhin 67400 Illkirch || France'
     app.contact.phone: '👉 01.02.03.04.07'
+    
 services:
     # default configuration for services in *this* file
     _defaults:

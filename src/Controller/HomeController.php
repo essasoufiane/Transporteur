@@ -29,6 +29,7 @@ class HomeController extends AbstractController
     {  
         return $this->render('navleft/presentations/histoire.html.twig', [
             'controller_name' => 'HomeController',
+           
           
         ]);
     }
