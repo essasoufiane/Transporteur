@@ -1,38 +1,90 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Les réservations | Order{% endblock %}
+{% block title %}Page Accueil | Home
+{% endblock %}
 
 {% block body %}
-    <h1>Order</h1>
+	<div class="video-bg">
+		<video width="320" height="240" autoplay loop muted>
+			<source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+	</div>
+	<div class="dark-light">
+		<svg viewbox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+			<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+	</div>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ order.id }}</td>
-            </tr>
-            <tr>
-                <th>Depart</th>
-                <td>{{ order.depart }}</td>
-            </tr>
-            <tr>
-                <th>Destination</th>
-                <td>{{ order.destination }}</td>
-            </tr>
-            <tr>
-                <th>Date_reservation</th>
-                <td>{{ order.dateReservation ? order.dateReservation|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Date_creation</th>
-                <td>{{ order.dateCreation ? order.dateCreation|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-        </tbody>
-    </table>
+	{# ----header desktop--- #}
+	<div class="app">
+		{% include "partials/header1.html.twig" %}
+		{# ----navbar left--- #}
+		<div class="wrapper">
+			<div class="left-side">
+				<div class="side-wrapper">
+					{% include "partials/navleft.html.twig" %}
+				</div>
+			</div>
 
-    <a href="{{ path('app_order_index') }}">back to list</a>
+			{# -----header mobile ---------- #}
+			<div class="main-container">
+				{% include "partials/headermobile.html.twig" %}
 
-    {# <a href="{{ path('app_order_edit', {'id': order.id}) }}">edit</a> #}
+				<div class="content-wrapper">
+					<div class="content-wrapper-header">
+						<div class="content-wrapper-context">
+							<h3 class="img-content">
+								Chauffeur privé
+							</h3>
+							<div class="content-text">Riche d’une expérience de conduite de 20 années, votre chauffeur maitrise 5 langues : anglais, français, espagnol, portugais et brésilien. Diplômé, il est titulaire du N° de licence.</div>
+							<button class="content-button bg-white  bold">
+								<a class="bg-white text-success text-decoration-none" href="{{path('app_contact')}}">Contactez</a>
+							</button>
+						</div>
+						<img class="content-wrapper-img" src="https://assets.codepen.io/3364143/glass.png" alt="">
+					</div>
 
-    {# {{ include('order/_delete_form.html.twig') }} #}
+					<div class="content-section">
+						<div class="content-section-title">Apps in your plan</div>
+						<div class="apps-card">
+							<div class="app-card">
+								<span>
+									IZY DRIVE DANS VOTRE VILLE
+								</span>
+								<div class="app-card__subtext">VTC IZY DRIVE, riche de l'expérience depuis 25 ans pour vous accompagner dans vos dépalacements en France métropolitan. Où que vous soyez dans la Haute Garonne, faites appel à vore chauffeur pour tous vos besoins. Votre confort est notre priorité.</div>
+								<div class="app-card-buttons">{# <img src="https://vtcexcellence.com/wp-content/uploads/2021/05/VTC-Toulouse-Chauffeur-jpg.jpg" alt="#"> #}
+									{# <button class="content-button status-button">Update</button> #}
+									{# <div class="menu"></div> #}
+								</div>
+							</div>
+							<div class="app-card">
+								<span>
+									IZY DRIVE DANS VOTRE VILLE
+								</span>
+								<div class="app-card__subtext">Quelle que soit votre destination ou votre demande personnalisée, que vous soyez particuliers ou professionnels, nous vous proposons un service de transport de personnes de qualité, transparent et sécurisé, avec des chauffeurs professionnels, expérimentés et à votre écoute.
+								</div>
+								<div class="app-card-buttons">{# <img src="https://vtcexcellence.com/wp-content/uploads/2021/05/VTC-EXCELLENCE-SERVICE-CONCIERGERIE.jpg" alt=""> #}
+									{# <button class="content-button status-button">Update</button> #}
+									{# <div class="menu"></div> #}
+								</div>
+							</div>
+
+							<div class="app-card">
+								<span>
+									SERVICE AU KM
+								</span>
+								<div class="app-card__subtext">Nous opérons 7J/7 et 24h/24, pour vos déplacements en VTC sur Paris, Bordeaux et Strasbourg, vers les aéroports, mais aussi pour vos rendez-vous professionnels, conférences, parcs d'affaires etc. Et pour toute demande d'information complémentaire, n'hésitez pas à nous contacter. A bientôt !</div>
+								<div class="app-card-buttons">{# <button class="content-button status-button">Update</button> #}
+									{# <img src="https://vtcexcellence.com/wp-content/uploads/2021/05/louer-un-vehicule-avec-chauffeur-a-toulouse-1.jpg" alt="#"> #}
+									{# <div class="menu"></div> #}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="overlay-app"></div>
+	</div>
+
 {% endblock %}

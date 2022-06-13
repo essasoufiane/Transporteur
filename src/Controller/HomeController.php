@@ -123,6 +123,17 @@ class HomeController extends AbstractController
           
         ]);
     }
+
+    //nous contacter 
+
+    #[Route('/nouscontacter', name: 'nouscontacter')]
+    public function ContacterNous(): Response
+    {  
+        return $this->render('navleft/legales/nouscontacter.html.twig', [
+            'controller_name' => 'HomeController',
+          
+        ]);
+    }
    
 
 }
