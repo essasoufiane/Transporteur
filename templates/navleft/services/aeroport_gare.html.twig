@@ -18,15 +18,15 @@
 	{# ----header desktop--- #}
 	<div class="app">
 		{% include "partials/header1.html.twig" %}
-	{# ----navbar left--- #}
+		{# ----navbar left--- #}
 		<div class="wrapper">
 			<div class="left-side">
 				<div class="side-wrapper">
 					{% include "partials/navleft.html.twig" %}
 				</div>
 			</div>
-			
-	{# -----header mobile ---------- #}
+
+			{# -----header mobile ---------- #}
 			<div class="main-container">
 				{% include "partials/headermobile.html.twig" %}
 
@@ -37,45 +37,51 @@
 								Chauffeur privé
 							</h3>
 							<div class="content-text">Riche d’une expérience de conduite de 20 années, votre chauffeur maitrise 5 langues : anglais, français, espagnol, portugais et brésilien. Diplômé, il est titulaire du N° de licence.</div>
-							<button class="content-button bg-white  bold"><a class="bg-white text-success text-decoration-none"  href="{{path('app_contact')}}">Contactez</a></button>
+							<button class="content-button bg-white  bold">
+								<a class="bg-white text-success text-decoration-none" href="{{path('app_contact')}}">Contactez</a>
+							</button>
 						</div>
-						<img class="content-wrapper-img" src="https://assets.codepen.io/3364143/glass.png" alt="">
+						{# <img class="content-wrapper-img" src="https://assets.codepen.io/3364143/glass.png" alt=""> #}
 					</div>
-				
+
 					<div class="content-section">
-						
+
 						<div class="apps-card">
-	<div class="app-card">
+							<div class="app-card text-center">
 								<span>
-									IZY DRIVE DANS VOTRE VILLE
+									<h3 class="animate__flip">En ville
+									</h3>
 								</span>
 								<div class="app-card__subtext">VTC IZY DRIVE, riche de l'expérience depuis 25 ans pour vous accompagner dans vos dépalacements en France métropolitan. Où que vous soyez dans la Haute Garonne, faites appel à vore chauffeur pour tous vos besoins. Votre confort est notre priorité.</div>
-								<div class="app-card-buttons"> <img src="https://images.pexels.com/photos/1170178/pexels-photo-1170178.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="#">
-									 
-									 <div class="menu"></div> 
+								<div class="app-card-buttons">
+									<img src="https://images.pexels.com/photos/1170178/pexels-photo-1170178.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image">
+
+									<div class="menu"></div>
 								</div>
 							</div>
-							<div class="app-card">
+							<div class="app-card text-center">
 								<span>
-									IZY DRIVE DANS VOTRE VILLE
+									<h3 class="animate__flip">Dans les gares
+									</h3>
 								</span>
-								 <img src="https://images.pexels.com/photos/69121/passenger-traffic-airline-aviation-air-transportation-69121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+								<img src="https://images.pexels.com/photos/69121/passenger-traffic-airline-aviation-air-transportation-69121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
 								<div class="app-card__subtext">Quelle que soit votre destination ou votre demande personnalisée, que vous soyez particuliers ou professionnels, nous vous proposons un service de transport de personnes de qualité, transparent et sécurisé, avec des chauffeurs professionnels, expérimentés et à votre écoute.
 								</div>
 								<div class="app-card-buttons">
-									
-									 <div class="menu"></div> 
+
+									<div class="menu"></div>
 								</div>
 							</div>
 
-							<div class="app-card">
+							<div class="app-card text-center">
 								<span>
-									SERVICE AU KM
+									<h3 class="animate__flip">Aéroports
+									</h3>
 								</span>
 								<div class="app-card__subtext">Nous opérons 7J/7 et 24h/24, pour vos déplacements en VTC sur Paris, Bordeaux et Strasbourg, vers les aéroports, mais aussi pour vos rendez-vous professionnels, conférences, parcs d'affaires etc. Et pour toute demande d'information complémentaire, n'hésitez pas à nous contacter. A bientôt !</div>
 								<div class="app-card-buttons">
-									<img src="https://images.pexels.com/photos/9846135/pexels-photo-9846135.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="#"> 
-									 <div class="menu"></div>
+									<img src="https://images.pexels.com/photos/9846135/pexels-photo-9846135.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image ">
+									<div class="menu"></div>
 								</div>
 							</div>
 						</div>
