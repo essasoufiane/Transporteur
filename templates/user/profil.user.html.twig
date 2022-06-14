@@ -85,12 +85,13 @@
 										{{ app.user.age }}</p>
 								</div>
 							</div>
+							<button class="content-button  animate__flipInY animate__animated">
+								<a class="text-decoration-none text-white" href="{{ path('app_user_edit', {'id': app.user.id}) }}">Modifier
+								</a>
+							</button>
 						</div>
 						<img class="content-wrapper-img" src="https://assets.codepen.io/3364143/glass.png" alt="">
 					</div>
-
-    <a href="{{ path('app_user_edit', {'id': app.user.id}) }}">Modifier </a>
-	 <a href="{{ path('app_user_delete', {'id': app.user.id}) }}">Supprimer </a>
 
 				</div>
 			</div>
