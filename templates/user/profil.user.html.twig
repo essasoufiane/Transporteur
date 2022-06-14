@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}User index
+{% block title %}Mon profile
 {% endblock %}
 
 {% block body %}
@@ -28,7 +28,7 @@
 				<div class="content-wrapper">
 					<div class="content-wrapper-header">
 						<div class="content-wrapper-context">
-							<div class="">
+							
 								<div>
 									<p>Email :
 										{{ app.user.email }}</p>
@@ -43,7 +43,7 @@
 									<p>Age :
 										{{ app.user.age }}</p>
 								</div>
-							</div>
+							
 							<button class="content-button  animate__flipInY animate__animated">
 								<a class="text-decoration-none text-white" href="{{ path('app_user_edit', {'id': app.user.id}) }}">Modifier
 								</a>
