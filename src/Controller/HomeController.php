@@ -24,10 +24,10 @@ class HomeController extends AbstractController
         ]);
     }
     // route histoire et render du template 
-    #[Route('/histoire', name: 'histoire')]
+    #[Route('/apropos', name: 'apropos')]
     public function histoireIzyDrive(): Response
     {  
-        return $this->render('navleft/presentations/histoire.html.twig', [
+        return $this->render('navleft/presentations/apropos.html.twig', [
             'controller_name' => 'HomeController',
            
           
@@ -96,16 +96,7 @@ class HomeController extends AbstractController
           
         ]);
     }
-    // a propos template/legales
-    #[Route('/apropos', name: 'apropos')]
-    public function Apropos(): Response
-    {  
-        return $this->render('navleft/legales/apropos.html.twig', [
-            'controller_name' => 'HomeController',
-          
-        ]);
-    }
-    // mentions legales 
+       // mentions legales 
     #[Route('/mentionslegales', name: 'mentionslegales')]
     public function MentionsLegales(): Response
     {  
@@ -130,6 +121,16 @@ class HomeController extends AbstractController
     public function ContacterNous(): Response
     {  
         return $this->render('navleft/legales/nouscontacter.html.twig', [
+            'controller_name' => 'HomeController',
+          
+        ]);
+    }
+   
+    //
+    #[Route('/templategares', name: 'templategares')]
+    public function GaresInfos(): Response
+    {  
+        return $this->render('navleft/seervices/templategares.html.twig', [
             'controller_name' => 'HomeController',
           
         ]);
