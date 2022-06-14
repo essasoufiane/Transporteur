@@ -31,7 +31,7 @@
 				{% include "partials/headermobile.html.twig" %}
 
 				<div class="content-wrapper">
-					<div class="content-wrapper-header bg-info">
+					<div class="content-wrapper-header  ">
 						<div class="content-wrapper-context">
 							<h2 class="img-content">
 								Votre chauffeur privé
@@ -40,13 +40,39 @@
 							<div class="content-text">Un service de transport de qualite, rapide et efficace.
 							</div>
 							{# Commandez une course sans plus attendre avec votre chauffeur préféré. #}
-							<button class="content-button bg-white  bold">
-								<a class="bg-white text-success text-decoration-none" href="{{path('app_order_new')}}">Reservez!</a>
+							<button class="content-button  animate__flipInY animate__animated">
+								<a class="text-decoration-none text-white" href="{{path('app_order_new')}}">Reservez!</a>
 							</button>
 						</div>
 
-						<img class="content-wrapper-img  w-75 " min-heigth="150px" src="{{asset('assets/images/chauffeurvtc.png')}}" alt="">
+						<img class="content-wrapper-img  w-75" min-heigth="150px" src="{{asset('assets/images/chauffeurvtc.png')}}" alt="">
 					</div>
+					<h2 class="text-center py-3 animate__backInRight animate__animated ">Disponible 24/24h 7/7j</h2>
+
+					{# -----carousel---------- #}
+					<div class="bd-example">
+						<div id="carouselExampleCaptions" class="carousel slide pointer-event" data-ride="carousel">
+							<ol class="carousel-indicators">
+								<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+								<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+							</ol>
+							<div class="carousel-inner" role="listbox">
+								<div class="carousel-item active">
+									<img class="rounded d-block w-100" data-src="holder.js/900x300?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide" alt="First slide [900x300]" src="{{asset('assets/images/vtcslider2.png')}}" data-holder-rendered="true">
+									<div class="carousel-caption d-none d-md-block">
+
+									</div>
+								</div>
+								<div class="carousel-item">
+									<img class="rounded d-block w-100" data-src="holder.js/900x300?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide" alt="Second slide [900x300]" src="{{asset('assets/images/vtcslider1.png')}}" data-holder-rendered="true">
+									<div class="carousel-caption d-none d-md-block">
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
 
 					<div
 						class="content-section">
@@ -57,7 +83,7 @@
 									Un tarif connu à l’avance et sans surprise à l’arrivée
 								</span>
 								<div class="app-card__subtext">A la réservation ou lors de votre demande de devis, un tarif vous est annoncé. Ce tarif est celui que vous réglerez une fois la course terminée. Et ce, qu’il y ait des embouteillages, plus de bagages de prévu ou une personne supplémentaire
-									.</div>
+																		.</div>
 								<div class="app-card-buttons"><img src="https://vtcexcellence.com/wp-content/uploads/2021/05/VTC-Toulouse-Chauffeur-jpg.jpg" alt="image vtc">
 								{# <button class="content-button status-button">Update</button> #}
 									{# <div class="menu"></div> #}
