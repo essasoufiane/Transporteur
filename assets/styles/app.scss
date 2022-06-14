@@ -887,4 +887,14 @@ body.light-mode .video-bg:before {
 
 .fa-times { display: none; }
 
+// card a  propos 
 
+.apps-card {
+  align-items: flex-start;
+  text-justify: auto;
+  .app-card{
+    min-height: 300px;
+    margin-top: auto;
+   
+ }
+}
