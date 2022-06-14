@@ -788,6 +788,7 @@ body.light-mode .video-bg:before {
  align-items: center;
  flex-wrap: wrap;
  width: calc(100% + 20px);
+ align-items: flex-start;
 }
 
 .app-card {
@@ -804,6 +805,7 @@ body.light-mode .video-bg:before {
  &:hover {
   transform: scale(1.02);
   background-color: var(--theme-bg-color);
+  min-height: 300px;
  }
  svg {
   width: 28px;
