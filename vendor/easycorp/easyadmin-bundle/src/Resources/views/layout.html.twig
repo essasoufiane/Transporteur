@@ -58,7 +58,7 @@
 			{% endfor %}
 		{% endblock %}
 	</head>
-
+{# ------------------------------------------------------------------------------------------------------------ #}
 	{% block body %}
 		<body id="{% block body_id %}{% endblock %}" class="ea {% block body_class %}{% endblock %}" data-ea-content-width="{{ ea.crud.contentWidth ?? ea.dashboardContentWidth ?? 'normal' }}" data-ea-sidebar-width="{{ ea.crud.sidebarWidth ?? ea.dashboardSidebarWidth ?? 'normal' }}" data-ea-dark-scheme-is-enabled="{{ ea.dashboardHasDarkModeEnabled ? 'true' : 'false' }}">
 			{% block javascript_page_layout %}
@@ -166,7 +166,7 @@
 									<a
 										class="user-details" type="button" data-bs-toggle="dropdown" data-bs-offset="0,5" aria-expanded="false">
 										{# to make the site design consistent, always display the user avatar in responsive header
-																																																												                                   and hide the user name (because there's no space left) regardless of the user config #}
+																																																																						                                   and hide the user name (because there's no space left) regardless of the user config #}
 										{% if ea.userMenu.avatarDisplayed %}
 											{{ user_menu_avatar }}
 										{% else %}
@@ -212,10 +212,11 @@
 											</nav>
 										{% endblock header %}
 									</header>
-
+{# ------------------------------ lien du navbar ---------------------------------------- #}
 									{% block main_menu_wrapper %}
 										{{ include(ea.templatePath('main_menu')) }}
 									{% endblock main_menu_wrapper %}
+{# ------------------------------------------------------------------------------- #}
 								{% endblock sidebar %}
 
 								<div id="sidebar-resizer-handler" class="resizer-handler resizer-handler-left"></div>
@@ -352,10 +353,10 @@
 												</section>
 											{% endif %}
 										{% endblock %}
-										{# ----------------------------------------------- graphique---------------------------------------- #}
-<div>
-  <canvas id="myChart"></canvas>
-</div>
+{# ----------------------------------------------- graphique-------------------------------------------------------------------------------- #}
+										<div>
+											<canvas id="myChart"></canvas>
+										</div>
 
 									</article>
 								{% endblock content %}
@@ -374,41 +375,47 @@
 					{{ htmlContent|raw }}
 				{% endfor %}
 			{% endblock %}
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-  const labels = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-  ];
+			<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+			<script>
+				const labels = [
+'January',
+'February',
+'March',
+'April',
+'May',
+'June',
+];
 
-  const data = {
-    labels: labels,
-    datasets: [{
-      label: 'My First dataset',
-      backgroundColor: 'rgb(255, 99, 132)',
-      borderColor: 'rgb(255, 99, 132)',
-      data: [0, 10, 5, 2, 20, 30, 45],
-    }]
-  };
+const data = {
+  labels: [
+    'Red',
+    'Blue',
+    'Yellow'
+  ],
+  datasets: [{
+    label: 'My First Dataset',
+    data: [300, 50, 100],
+	
+    backgroundColor: [
+      'rgb(255, 99, 132)',
+      'rgb(54, 162, 235)',
+      'rgb(255, 205, 86)'
+    ],
+    hoverOffset: 4
+  }]
+};
 
-  const config = {
-    type: 'line',
-    data: data,
-    options: {}
-  };
-</script>
-<script>
-  const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-  );
-</script>
+const config = {
+  type: 'doughnut',
+  data: data,
+};
+			</script>
+			<script>
+				const myChart = new Chart(document.getElementById('myChart'), config);
+			</script>
 
 
 		</body>
 	{% endblock body %}
+
 </html>

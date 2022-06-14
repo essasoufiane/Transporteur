@@ -35,15 +35,16 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('TRANSPORTEUR ');
+            ->setTitle('Tableau de bord - Izydrive ');
     }
 
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
-     
-        yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-user', User::class);
+        yield MenuItem::section('', );
+        // linkToExitImpersonation  linkToLogout  linkToRoute  linkToUrl  section  subMenu
         yield MenuItem::linkToCrud('Réservations', 'fas fa-car', Order::class);
+        yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-user', User::class);
         yield MenuItem::linkToCrud('Messages reçus', 'fa fa-envelope', Contact::class);
     }
     public function configureAssets(): Assets
