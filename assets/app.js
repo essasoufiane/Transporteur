@@ -117,3 +117,69 @@ var btnOuvert = document.querySelector("body");
 	}
 
 });
+
+// daouda 
+$('.carousel').carousel({
+  interval: 2000
+})
+
+class Acomponent extends React.Component {
+	
+	state = { colors: ["F65342","F69A42","2B8697","32BA50"], classs: [], currentSlice: 0, interval: ''};
+
+
+	componentWillMount() {
+    this.state.classs.push("active");
+		this.setState({interval: setInterval(this.moveleft.bind(this),2000)});
+	}
+
+	moveleft() {
+		const currentSlice = this.state.currentSlice;
+    const nextSlice = (this.state.currentSlice == (this.state.colors.length-1)) ? 0 : (this.state.currentSlice+1);
+    const newClass = [];
+    newClass[currentSlice] = "removeImgLeft";
+    newClass[nextSlice] = "addImgLeft";
+    this.setState({classs:newClass,currentSlice:nextSlice});
+	}
+
+  moveright() {
+		const currentSlice = this.state.currentSlice;
+    const nextSlice = (this.state.currentSlice == 0) ? (this.state.colors.length-1) : (this.state.currentSlice-1);
+    const newClass = [];
+    newClass[currentSlice] = "removeImgRight";
+    newClass[nextSlice] = "addImgRight";
+    this.setState({classs:newClass,currentSlice:nextSlice});
+	}
+
+clickleft() {
+   clearInterval(this.state.interval);
+   this.moveright();
+}
+
+clickright() {
+   clearInterval(this.state.interval);
+   this.moveleft();
+}
+
+// Will Add Buttons Later
+
+	render() {
+		return (
+      <div>
+      <div className="carousel">
+				<div className="directions">
+					<a href="#" className="left" onClick={this.clickleft.bind(this)}> <img src="https://cdn0.iconfinder.com/data/icons/user-interface-6/100/ui-16-128.png" alt=""  /> </a>
+					<a href="#" className="right" onClick={this.clickright.bind(this)}> <img src="https://cdn0.iconfinder.com/data/icons/user-interface-6/100/ui-16-128.png" alt=""  /> </a> 
+				</div>
+				 <div className="imgs">
+					 {this.state.colors.map( (color, index) => { return <img className={`img ${this.state.classs[index]}`} src={`https://dummyimage.com/550x350/${color}/`} alt="img"/> } )}
+				</div>
+      </div>
+        lorem
+      </div>
+		)
+	}
+	
+};
+
+ReactDOM.render(<Acomponent/>,document.getElementById('root'));
