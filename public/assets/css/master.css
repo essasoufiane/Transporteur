@@ -1,0 +1,62 @@
+/* caroussel pour page navleft disposition.html.twig  */
+
+
+/*****carrousel 3d automatique*****/
+*{box-sizing : border-box}
+img{max-width:100%}
+.contenu_carou_auto{
+margin:2rem auto;
+width:420px;
+height:279px;
+perspective:8000px
+	}
+.caroussel-image{
+animation:rotation 24s infinite alternate linear;	
+transform-style:preserve-3d;
+position:relative;	
+}
+.caroussel-image img{
+position: absolute;
+top:0;
+left: 0;
+	}
+.caroussel-image img{
+filter:drop-shadow(0 12px 5px hsla(0,0%,0%,.4));
+width:400px;
+height:266px;
+left:10px;
+outline:1px solid transparent;
+backface-visibility:hidden
+	}
+.caroussel-image img:nth-child(1){
+transform:translate3d(0,0,495px)
+		}
+.caroussel-image img:nth-child(2){
+transform:rotateY(45deg) translateZ(495px)
+		}
+.caroussel-image img:nth-child(3){
+	transform:rotateY(90deg) translateZ(495px)
+	}
+.caroussel-image img:nth-child(4){
+	transform:rotateY(135deg) translateZ(495px)
+	}
+.caroussel-image img:nth-child(5){
+	transform:rotateY(180deg) translateZ(495px)
+	}
+.caroussel-image img:nth-child(6){
+	transform:rotateY(225deg) translateZ(495px)
+	}
+.caroussel-image img:nth-child(7){
+	transform:rotateY(270deg) translateZ(495px)
+	}
+.caroussel-image img:nth-child(8){
+	transform:rotateY(315deg) translateZ(495px)
+	}
+@keyframes rotation{
+from{transform:rotatey(0)}
+to{transform:rotatey(0.5turn)}}
+/*****fin carrousel 3d automatique*****/
+
+.caroussel-image .phraseindex{
+    z-index: 999;
+}
