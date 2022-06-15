@@ -17,12 +17,12 @@ class HomeController extends AbstractController
 
         $url = "http://api.openweathermap.org/data/2.5/weather?q=Paris&lang=fr&units=metric&appid=fd7f4e76060b245952329d86d0a4d642";
 
-        // On get les resultat
+        // Ajouter  les resultat
         $raw = file_get_contents($url);
-        // Décode la chaine JSON
+        // Décode la chaine JSON 
         $json = json_decode($raw);
 
-        // Nom de la ville
+        // Nom de la ville, vous pouvez choisir la ville où vous voulez 
         $name = $json->name;
 
         // Météo
@@ -43,7 +43,12 @@ class HomeController extends AbstractController
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
             'ville'=>$name,
-            'temperature'=>$temp
+            'temperature'=>$temp, 
+            'description'=> $desc, 
+            'vent'=>$speed, 
+            'deg'=>$deg, 
+            'feel_like'=>$feel_like, 
+            'weather'=>$weather
 
 
         ]);
