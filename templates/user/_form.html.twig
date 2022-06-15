@@ -7,10 +7,11 @@
 {# daouda #}
 
 {{ form_start(form) }}
-    Titre {{ form_widget(form.firstname, {'attr':{'class': 'form form-control' }}) }}
+   Prénom  {{ form_widget(form.firstname, {'attr':{'class': 'form form-control' }}) }}
+   
      {{ form_row(form.lastname, {'attr':{'class': 'form form-control' }}) }}
      {# j'ai commenter ces deux lignes car il y avait une erreur on pouvais pas editer USER, voir trello pour plus de details, ou contactez soufiane #}
-    {{ form_row(form.email, {'attr':{'class': 'form form-control' }}) }}
+    {# {{ form_row(form.email, {'attr':{'class': 'form form-control' }}) }} #}
          {# {{ form_row(form.password, {'attr':{'class': 'form form-control' }}) }} #}
         {{ form_row(form.age, {'attr':{'class': 'form form-control' }}) }}
           {{ form_row(form.adresse, {'attr':{'class': 'form form-control' }}) }}
