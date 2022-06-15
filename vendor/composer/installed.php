@@ -16,11 +16,11 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-<<<<<<< HEAD
-            'reference' => 'fadd278027ee995852356bfb7a3dad8e76ceead0',
-=======
             'reference' => '244b1af3bdb0ec8a0586f45d724227098c3b16a0',
+            'dev_requirement' => false,
+        ),
         'cocur/slugify' => array(
+            'pretty_version' => 'v4.1.0',
             'version' => '4.1.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../cocur/slugify',
