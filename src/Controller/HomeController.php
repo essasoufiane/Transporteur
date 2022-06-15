@@ -62,7 +62,7 @@ class HomeController extends AbstractController
 
     // route histoire et render du template 
     #[Route('/apropos', name: 'apropos')]
-    public function histoireIzyDrive(): Response
+    public function IzyDriveApropos(): Response
     {
         return $this->render('navleft/legales/apropos.html.twig');
     }
