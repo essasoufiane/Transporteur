@@ -1,7 +1,7 @@
 {# -----header desktop----- #}
 <header class="header">
 	{# <div class="menu-circle"></div> #}
-	<div class="desk"><img src="{{asset('assets/images/logo.png')}}" alt="logo izy drive"></div>
+	<div class="desk pr-4"><img src="{{asset('assets/images/logo.png')}}" alt="logo izy drive"></div>
 	<a class="menuSelector mob text-white">
 		<i class="fas fa-bars"></i>
 		<i class="fas fa-times"></i>
@@ -10,12 +10,13 @@
 		<a class="menu-link is-active desk" href="{{path('home_page')}}">Accueil</a>
 		<a class="menu-link notify desk" href="{{path('app_order_new')}}">Commander une course</a>
 		{% if is_granted('ROLE_ADMIN') %}
-			<a class="menu-link desk" href="{{path('app_contact')}}">Contact</a>
 			<a class="menu-link notify desk" href="{{path('show_user')}}">Mon profil</a>
+			<a class="menu-link desk" href="{{path('app_contact')}}">Contact</a>
+			<a class="menu-link desk" href="{{path('admin')}}">Dashboard</a>
 		{% elseif is_granted('ROLE_USER') %}
-			<a class="menu-link desk" href="{{path('app_contact')}}">Contact</a>
-			<a class="menu-link notify desk" href="{{path('show_user')}}">Mon profil</a>
 			<a class="menu-link notify desk" href="{{path('show_order')}}">Mes commandes</a>
+			<a class="menu-link notify desk" href="{{path('show_user')}}">Mon profil</a>
+			<a class="menu-link desk" href="{{path('app_contact')}}">Contact</a>
 
 		{% else %}
 			<a class="menu-link notify desk" href="{{path('show_user')}}">Connexion</a>
@@ -26,7 +27,7 @@
 
 	<div class="header-profile">
 	{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_USER')  %}
-		<a href="{{path('app_logout')}}" class="text-white pr-3 deco">
+		<a href="{{path('app_logout')}}" class="text-white pr-3 deco hvr-grow">
 			<i class="fas fa-sign-out-alt animate__backInDown animate__animated"></i>
 		</a>
 		
