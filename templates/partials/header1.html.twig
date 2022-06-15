@@ -1,11 +1,13 @@
 {# -----header desktop----- #}
 <header class="header">
 	{# <div class="menu-circle"></div> #}
-	<div class="desk pr-4"><img src="{{asset('assets/images/logo.png')}}" alt="logo izy drive"></div>
+	<a href="{{path('home_page')}}">
+	<img class="desk h-100" src="{{asset('assets/images/logo.png')}}" alt="logo izy drive"></a>
 	<a class="menuSelector mob text-white">
 		<i class="fas fa-bars"></i>
 		<i class="fas fa-times"></i>
 	</a>
+	<a class="mob ml-auto" href="{{path('home_page')}}"><img src="{{asset('assets/images/logo.png')}}" alt="logo izy drive"></a>
 	<div class="header-menu">
 		<a class="menu-link is-active desk" href="{{path('home_page')}}">Accueil</a>
 		<a class="menu-link notify desk" href="{{path('app_order_new')}}">Commander une course</a>
@@ -41,9 +43,10 @@
 		<img class="profile-img  animate__backInDown animate__animated" src="{{app.user.image}}" alt="image profile">
 		</a>
 	{% endif %}
-		<svg class=" animate__backInDown animate__animated" viewbox="0 0 512 512" fill="currentColor">
+	{# ----icon meteo nuage----- #}
+		{# <svg class=" animate__backInDown animate__animated" viewbox="0 0 512 512" fill="currentColor">
 			<path d="M448.773 235.551A135.893 135.893 0 00451 211c0-74.443-60.557-135-135-135-47.52 0-91.567 25.313-115.766 65.537-32.666-10.59-66.182-6.049-93.794 12.979-27.612 19.013-44.092 49.116-45.425 82.031C24.716 253.788 0 290.497 0 331c0 7.031 1.703 13.887 3.006 20.537l.015.015C12.719 400.492 56.034 436 106 436h300c57.891 0 106-47.109 106-105 0-40.942-25.053-77.798-63.227-95.449z"/>
-		</svg> 
+		</svg>  #}
 		
 		{# méteo  #}	
 		 
