@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Services A dispositions | Izydrive 
+{% block title %}Services A dispositions | Izydrive
 {% endblock %}
 
 {% block body %}
@@ -30,28 +30,23 @@
 			<div class="main-container">
 				{% include "partials/headermobile.html.twig" %}
 				<div class="content-wrapper">
+
 					<div class="content-wrapper-header " style="padding:0px; border:0px">
-						<img id="dispositionimage" class="content-wrapper-img mt-1 h-100  w-100 animate__animated animate__rotateInDownRight" src="https://www.vtc-avignon-provence.com/medias/images/visite-guidee-de-la-provence-location-de-voiture-avec-chauffeur-1.jpg?fx=r_700_146" alt="">
+						<img id="dispositionimage" class="content-wrapper-img mt-1 h-100 rounded  w-100 animate__animated animate__rotateInDownRight" src="https://www.vtc-avignon-provence.com/medias/images/visite-guidee-de-la-provence-location-de-voiture-avec-chauffeur-1.jpg?fx=r_700_146" alt="">
 					</div>
+
+
 					{# <h3 class="img-content text-center container animate__animated animate__rotateInDownRight">Daouda </h3> #}
 					<div
 						class="content-section">
 						{# <div class="content-section-title">Apps in your plan</div> #}
-						<div class="apps-card">
+						<div
+							class="apps-card">
+
 							{# caroussel  #}
-								<div class="contenu_carou_auto"> <div style="top:0%;" class="caroussel-image">
-									<img src="{{asset('assets/images/izydrive2.jpeg')}}" alt>
-									<img src="{{asset('assets/images/izydrive.jpeg')}}" alt>
-									<img src="{{asset('assets/images/chauffeurvtc.png')}}" alt>
-									<img src="{{asset('assets/images/izydrive.jpeg')}}" alt>
-									<img src="{{asset('assets/images/izydrive2.jpeg')}}" alt>
-									<img src="{{asset('assets/images/chauffeurvtc.png')}}" alt>
-									<img src="{{asset('assets/images/izydrive1.jpeg')}}" alt>
-									<img src="{{asset('assets/images/chauffeurvtc.png')}}" alt>
-									<img src="{{asset('assets/images/izydrive1.jpeg')}}" alt>
-								</div>
-							</div>
+						
 							{# fin caroussel  #}
+
 						</div>
 					</div>
 				</div>
@@ -59,4 +54,5 @@
 		</div>
 	</div>
 	<div class="overlay-app"></div>
+
 </div>{% endblock %}

@@ -9,6 +9,7 @@ use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -31,6 +32,12 @@ class RegistrationFormType extends AbstractType
                 "label" => "Votre adresse",
                 "attr" => ["placeholder" => "25 rue de la farfouille, Paris"]
             ])
+                // daouda ajout de la proprié image 
+                ->add('image', UrlType::class, [
+                    'label' => 'Lien de votre image',
+                    'attr'  => ['placeholder' => 'Coller un lien d\'image']   
+                ])
+
             ->add('email', EmailType::class, [
                 "label" => "Email",
                 "attr"  => ["placeholder" => "Votre email"]

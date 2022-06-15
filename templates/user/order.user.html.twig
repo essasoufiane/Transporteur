@@ -32,58 +32,60 @@
 
 				<div class="content-wrapper">
 					<div class="content-wrapper-header">
-						<div class="content-wrapper-context container"><h1 class="container text-center ">Inscrivez-vous 
-					</h1></div>
+
+						<h1>Historique des commandes
+						</h1>
+
 					</div>
 
 					{# formulaire inscription  #}
-<div class="content-section text-white">
-					<div class="content-section-title">Mes commandes</div>
-					<ul>
-						<li class="adobe-product">
-							<div class="products">Identifiant
-							</div>
-							<div class="products">Depart
-							</div>
-							<span class="status">Destination
-							</span>
-							<span class="status">Date de départ
-							</span>
-							<span class="status">Date de réservation
-							</span>
-						</li>
-						{% for order in app.user.orders %}
-
+					<div class="content-section text-white">
+						{# <div class="content-section-title">Mes commandes</div> #}
+						<ul>
 							<li class="adobe-product">
-								<div class="products">{{ order.id }}
+								<div class="products">Identifiant
 								</div>
-								<div class="products">{{ order.depart }}
+								<div class="products">Depart
 								</div>
-								<span class="status">{{ order.destination }}
+								<span class="status">Destination
 								</span>
-								<span class="status">{{ order.dateReservation ? order.dateReservation|date('Y-m-d H:i:s') : '' }}
+								<span class="status">Date de départ
 								</span>
-								<span class="status">{{ order.dateCreation ? order.dateCreation|date('Y-m-d H:i:s') : '' }}
+								<span class="status">Date de réservation
 								</span>
-
 							</li>
-						{% else %}
-							<li class="adobe-product">
-								<div class="products">Il n'y a aucune commade acutuellement !
-								</div>
+							{% for order in app.user.orders %}
 
-							</li>
-						{% endfor %}
+								<li class="adobe-product">
+									<div class="products">{{ order.id }}
+									</div>
+									<div class="products">{{ order.depart }}
+									</div>
+									<span class="status">{{ order.destination }}
+									</span>
+									<span class="status">{{ order.dateReservation ? order.dateReservation|date('Y-m-d H:i:s') : '' }}
+									</span>
+									<span class="status">{{ order.dateCreation ? order.dateCreation|date('Y-m-d H:i:s') : '' }}
+									</span>
+
+								</li>
+							{% else %}
+								<li class="adobe-product">
+									<div class="products">Il n'y a aucune commade acutuellement !
+									</div>
+
+								</li>
+							{% endfor %}
 
 
-					</ul>
-				{# fin du foàrmulaire  #}
+						</ul>
+						{# fin du foàrmulaire  #}
 
 
+					</div>
 				</div>
-			</div>
 
-			<div class="overlay-app"></div>
+				<div class="overlay-app"></div>
+			</div>
 		</div>
-	</div>
-{% endblock %}
+	{% endblock %}

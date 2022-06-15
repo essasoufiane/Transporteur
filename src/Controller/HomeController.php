@@ -135,6 +135,13 @@ class HomeController extends AbstractController
           
         ]);
     }
+
+    // ---route--du--nevleft--pour--mobile--ne-pas-toucher--ou--contacter--MR--Soufiane
+    #[Route('/navleftmobile', name: 'navleftMobile')]
+    public function navleftMobile(): Response
+    {  
+        return $this->render('mobileView/navleftMobile.html.twig');
+    }
    
 
 }

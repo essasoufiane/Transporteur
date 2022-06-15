@@ -860,7 +860,7 @@ body.light-mode .video-bg:before {
  border-radius: 10px;
 }
 
-// ----Header-----
+// ----Header-----Soufiane---
 @media screen and (max-width: 1050px) {
 .desk{
   display: none;
@@ -889,6 +889,17 @@ body.light-mode .video-bg:before {
 
 .fa-times { display: none; }
 
+// ---liste--menu--navleft--mobile---
+
+ul {
+  list-style-type: none;
+}
+.text-none{
+  text-decoration: none;
+
+}
+// ----END--Soufiane----
+
 // card a  propos 
 
 .apps-card{
@@ -900,3 +911,16 @@ body.light-mode .video-bg:before {
    
  }
 }
+
+
+
+// daouda caroussel 
+
+  // Colors
+
+
+
+
+////////// Mixin 
+
+

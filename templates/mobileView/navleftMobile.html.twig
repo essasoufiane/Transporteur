@@ -31,21 +31,16 @@
 				{% include "partials/headermobile.html.twig" %}
 
 				<div class="content-wrapper">
-					<div class="content-wrapper-header">
 
-						<h1>Commander votre course !
-						</h1>
+				{% include "partials/navleft.html.twig" %}
+					
 
-					</div>
-
-					{# formulaire inscription  #}
-					{{ include('order/_form.html.twig') }}
 
 
 				</div>
 			</div>
-
-			<div class="overlay-app"></div>
 		</div>
+		<div class="overlay-app"></div>
 	</div>
+
 {% endblock %}
