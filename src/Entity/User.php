@@ -58,10 +58,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $image;
 
+    #[ORM\OneToMany(mappedBy: 'user_id', targetEntity: Notice::class)]
+    private $notices;
+
 
     public function __construct()
     {
         $this->orders = new ArrayCollection();
+        $this->notices = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -239,6 +243,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setImage(?string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Notice>
+     */
+    public function getNotices(): Collection
+    {
+        return $this->notices;
+    }
+
+    public function addNotice(Notice $notice): self
+    {
+        if (!$this->notices->contains($notice)) {
+            $this->notices[] = $notice;
+            $notice->setUserId($this);
+        }
+
+        return $this;
+    }
+
+    public function removeNotice(Notice $notice): self
+    {
+        if ($this->notices->removeElement($notice)) {
+            // set the owning side to null (unless already changed)
+            if ($notice->getUserId() === $this) {
+                $notice->setUserId(null);
+            }
+        }
 
         return $this;
     }
