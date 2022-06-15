@@ -41,7 +41,6 @@ class HomeController extends AbstractController
 
 
         return $this->render('home/index.html.twig', [
-            'controller_name' => 'HomeController',
             'ville'=>$name,
             'temperature'=>$temp, 
             'description'=> $desc, 
