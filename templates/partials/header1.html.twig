@@ -27,7 +27,7 @@
 
 	<div class="header-profile">
 	{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_USER')  %}
-		<a href="{{path('app_logout')}}" class="text-white pr-3 deco hvr-grow">
+		<a href="{{path('app_logout')}}" class="text-white pr-3 deco hvr-grow" title="Déconnexion">
 			<i class="fas fa-sign-out-alt animate__backInDown animate__animated"></i>
 		</a>
 		
