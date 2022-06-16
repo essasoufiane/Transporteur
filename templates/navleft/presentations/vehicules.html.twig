@@ -18,15 +18,15 @@
 	{# ----header desktop--- #}
 	<div class="app">
 		{% include "partials/header1.html.twig" %}
-	{# ----navbar left--- #}
+		{# ----navbar left--- #}
 		<div class="wrapper">
 			<div class="left-side">
 				<div class="side-wrapper">
 					{% include "partials/navleft.html.twig" %}
 				</div>
 			</div>
-			
-	{# -----header mobile ---------- #}
+
+			{# -----header mobile ---------- #}
 			<div class="main-container">
 				{% include "partials/headermobile.html.twig" %}
 
@@ -37,35 +37,39 @@
 								Véhicules
 							</h3>
 							<div class="content-text ">Riche d’une expérience de conduite de 20 années, votre chauffeur s'adapte à toutes vos situation. Pour tous vos déplacements privés ou professionnels.</div>
-							<button class="content-button bg-white  bold"><a class="bg-white text-success text-decoration-none"  href="{{path('app_contact')}}">Contactez</a></button>
+							<button class="content-button bg-white  bold">
+								<a class="bg-white text-success text-decoration-none" href="{{path('app_contact')}}">Contactez</a>
+							</button>
 						</div>
 						<img class="content-wrapper-img" src="" alt="">
 					</div>
-				
+
 					<div class="content-section">
 						<div class="content-section-title">Notre flotte de vehicule</div>
 						<div class="apps-card">
-	<div class="app-card h-100">
+							<div class="app-card h-100">
 								<span>
 									MODERNE
 								</span>
 								<div class="app-card__subtext">VTC IZY DRIVE, riche de l'expérience depuis 20 ans pour vous accompagner dans vos dépalacements en France métropolitan. Où que vous soyez dans la Haute Garonne, faites appel à vore chauffeur pour tous vos besoins. Votre confort est notre priorité.</div>
-								<div class="app-card-buttons"><img src="https://kirotravel.com/wp-content/uploads/2021/05/Voiture-noire.jpeg" alt="#">
-									{# <button class="content-button status-button">Update</button>
-									{# <div class="menu"></div> #}
-									
+								<div class="app-card-buttons"><img
+									src="https://kirotravel.com/wp-content/uploads/2021/05/Voiture-noire.jpeg" alt="#">
+								{# <button class="content-button status-button">Update</button>
+								{# <div class="menu"></div> #}
+
 								</div>
 							</div>
 							<div class="app-card h-100">
 								<span>
 									COVID 19 ET LES AUTRES
 								</span>
-								<div class="app-card__subtext"> Tous nos vehicules respectent les normes sanitaire. Equipé de la technologie  son équipé d'un systeme de 
-								
-								Quelle que soit votre destination ou votre demande personnalisée, que vous soyez particuliers ou professionnels, nous vous proposons un service de transport de personnes de qualité, transparent et sécurisé, avec des chauffeurs professionnels, expérimentés et à votre écoute.
+								<div class="app-card__subtext">
+									Tous nos vehicules respectent les normes sanitaire. Equipé de la technologie  son équipé d'un systeme de 
+									
+									Quelle que soit votre destination ou votre demande personnalisée, que vous soyez particuliers ou professionnels, nous vous proposons un service de transport de personnes de qualité, transparent et sécurisé, avec des chauffeurs professionnels, expérimentés et à votre écoute.
 								</div>
 								<div class="app-card-buttons"><img src="https://montransport.com/local/provider_slideshow/3879/7385/5842eaf3e3e289.63863916.jpg" alt="">
-									{# <button class="content-button status-button">Update</button> #}
+								{# <button class="content-button status-button">Update</button> #}
 									{# <div class="menu"></div> #}
 								</div>
 							</div>
@@ -75,10 +79,13 @@
 									ÉQUIPEMENT
 								</span>
 								<div class="app-card__subtext">Vous voyagez en groupe, vous aimez avoir de l’espace ou disposez de nombreux bagages ?
-Déplacez-vous dans l’un de nos vans tout confort pour profiter de son habitabilité maximale. Comme pour nos autres services, nos chauffeurs Vans VTC vous garantiront ponctualité et sécurité pour tous vos déplacements sur Marseille et la région PACA.</div>
-								<div class="app-card-buttons">{# <button class="content-button status-button">Update</button> #}
-									<img src="https://monchauffeuralaclasse.fr/wp-content/uploads/2022/04/van-VTC-mcalcty.jpg" alt="Van-VTC">
-									{# <div class="menu"></div> #}
+									Déplacez-vous dans l’un de nos vans tout confort pour profiter de son habitabilité maximale. Comme pour nos autres services, nos chauffeurs Vans VTC vous garantiront ponctualité et sécurité pour tous vos déplacements sur Marseille et la région PACA.</div>
+								<div
+									class="app-card-buttons">
+									{# <button class="content-button status-button">Update</button> #}
+									<img
+									src="https://monchauffeuralaclasse.fr/wp-content/uploads/2022/04/van-VTC-mcalcty.jpg" alt="Van-VTC">
+								{# <div class="menu"></div> #}
 								</div>
 							</div>
 						</div>

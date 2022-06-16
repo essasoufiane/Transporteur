@@ -31,7 +31,7 @@
 				{% include "partials/headermobile.html.twig" %}
 
 				<div class="content-wrapper">
-					<h1 class="text-center" >VISITE EXCLUSIVE DES VIGNOBLES BORDELAIS</h1>
+					<h1 class="text-center">VISITE EXCLUSIVE DES VIGNOBLES BORDELAIS</h1>
 					<div class="bd-example">
 						<div id="carouselExampleCaptions" class="carousel slide pointer-event" data-ride="carousel">
 							<ol class="carousel-indicators">
@@ -40,22 +40,18 @@
 							</ol>
 							<div class="carousel-inner" role="listbox">
 								<div class="carousel-item active">
-									<img class="rounded d-block w-100" data-src="holder.js/900x300?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide" alt="First slide [900x300]" src="{{asset('assets/images/vtcslider2.png')}}" data-holder-rendered="true">
-									<div class="carousel-caption d-none d-md-block">
-
-									</div>
+									<img class="rounded d-block w-100" data-src="holder.js/900x300?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide" alt="First slide [900x300]" src="{{asset('assets/images/visite1.jpg')}}" data-holder-rendered="true">
+									<div class="carousel-caption d-none d-md-block"></div>
 								</div>
 								<div class="carousel-item">
-									<img class="rounded d-block w-100" data-src="holder.js/900x300?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide" alt="Second slide [900x300]" src="{{asset('assets/images/vtcslider1.png')}}" data-holder-rendered="true">
-									<div class="carousel-caption d-none d-md-block">
-
-									</div>
+									<img class="rounded d-block w-100" data-src="holder.js/900x300?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide" alt="Second slide [900x300]" src="{{asset('assets/images/visite2.jpg')}}" data-holder-rendered="true">
+									<div class="carousel-caption d-none d-md-block"></div>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<h2 class="text-center py-3 animate__backInRight animate__animated ">Réserver votre visite maintenent !</h2>
+					<h2 class="text-center py-3 animate__backInRight animate__animated ">Visitez sereinement !</h2>
 
 					{# -----carousel---------- #}
 
@@ -64,45 +60,61 @@
 						class="content-section">
 						{# <div class="content-section-title">Apps in your plan</div> #}
 						<div class="apps-card">
-							<article class="app-card">
+							<article class="app-card h-100">
 								<span>
-									Un tarif connu à l’avance et sans surprise à l’arrivée
+									ARCACHON MARGAUX
 								</span>
-								<div class="app-card__subtext">A la réservation ou lors de votre demande de devis, un tarif vous est annoncé. Ce tarif est celui que vous réglerez une fois la course terminée. Et ce, qu’il y ait des embouteillages, plus de bagages de prévu ou une personne supplémentaire
-																		.</div>
-								<div class="app-card-buttons"><img src="https://vtcexcellence.com/wp-content/uploads/2021/05/VTC-Toulouse-Chauffeur-jpg.jpg" alt="image vtc">
-								{# <button class="content-button status-button">Update</button> #}
-									{# <div class="menu"></div> #}
+								<div class="app-card__subtext">Programme du circuit :
+									Prise en charge à votre hôtel à Bordeaux en véhicule tout confort climatisé avec votre « guide du vin ». Direction le bassin d’Arcachon et plus particulièrement la presqu’île du Cap Ferret.</div>Tarifs à la journée 2022 :<br>
+								2/3 personnes : 440 €
+								<br>
+								4/5 personnes : 490 €
+								<br>
+								6/7 personnes : 540 €
+								<div class="app-card-buttons ">
+									<button class="content-button status-button">
+										<a href="{{path('app_order_new')}}">Réserver</a>
+									</button>
+								</div>
+							</article>
+							<article class="app-card h-100">
+								<span>
+									SAINT-EMILION DÉJEUNER AU CHÂTEAU
+								</span>
+								<div class="app-card__subtext">Prise en charge à votre hôtel à Bordeaux en véhicule tout confort climatisé avec votre chauffeur/guide pour St Emilion.
+									
+									1ère visite avec le vigneron, dans une propriété familiale telle que Château LANIOTE, CADET BON, FRANC LAPORTE, LE CHATELET....</div>Tarifs à la journée 2022 :<br>
+								2/3 personnes : 440 €
+								<br>
+								4/5 personnes : 490 €
+								<br>
+								6/7 personnes : 540 €
+								<div class="app-card-buttons">
+									<button class="content-button status-button">
+										<a href="{{path('app_order_new')}}">Réserver</a>
+									</button>
+								</div>
+							</article>
+							<article class="app-card h-100">
+								<span>
+									MÉDOC 1855
+								</span>
+								<div class="app-card__subtext">Prise en charge à votre hôtel à Bordeaux, en véhicule tout confort climatisé avec votre « guide du vin ». Direction les vignobles du Médoc par la route des châteaux !
+									
+									Premier arrêt à Margaux, pour découvrir l'un des Grands Crus classés 1855 tels que d'ISSAN, MARQUIS DE TERME, CANTENAC BROWN, DESMIRAIL, DAUZAC, ... avec dégustation des vins de la propriété.</div>Tarifs à la journée 2022 :<br>
+								2/3 personnes : 440 €
+								<br>
+								4/5 personnes : 490 €
+								<br>
+								6/7 personnes : 540 €
+								<div class="app-card-buttons">
+									<button class="content-button status-button">
+										<a href="{{path('app_order_new')}}">Réserver</a>
+									</button>
 								</div>
 							</article>
 
-							<article class="app-card">
-								<span>
-									Facilité de paiement
-								</span>
-								<div class="app-card__subtext">Dans la voiture, vous pourrez régler votre course par carte bancaire ou en espèces. Et pour plus de flexibilité, n’oubliez pas la réservation en ligne offrant la possibilité d’un paiement par CB, Paypal...
 
-								</div>
-								<div class="app-card-buttons"><img src="https://vtcexcellence.com/wp-content/uploads/2021/05/VTC-EXCELLENCE-SERVICE-CONCIERGERIE.jpg" alt="image vtc">
-								{# <button class="content-button status-button">Update</button> #}
-									{# <div class="menu"></div> #}
-								</div>
-							</article>
-
-							<article class="app-card">
-								<span>
-									Accessible 24h/24 et 7 jours/7
-								</span>
-								<div class="app-card__subtext">Vous cherchez un chauffeur qui puisse vous transférer dans l’instant. Grâce à notre outil de réservation en ligne, réservez à n’importe quelle heure, c’est vous qui définissez l’horaire et le lieu du rendez-vous. Une confirmation vous est envoyée et nous venons à votre rencontre (sous réserve de disponibilité du véhicule au moment de la réservation).
-								</div>
-								<div
-									class="app-card-buttons">
-									{# <button class="content-button status-button">Update</button> #}
-									<img
-									src="https://vtcexcellence.com/wp-content/uploads/2021/05/louer-un-vehicule-avec-chauffeur-a-toulouse-1.jpg" alt="image vtc">
-								{# <div class="menu"></div> #}
-								</div>
-							</article>
 						</div>
 					</div>
 				</div>
