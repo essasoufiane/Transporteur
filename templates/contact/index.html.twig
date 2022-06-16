@@ -38,7 +38,7 @@
 					<div class="row form-group mt-2">
 						<div class="col-md-6 mb-3 mb-md-0">
 							{{ form_start(form)}}
-							
+
 							{{form_row(form.firstName, {'attr':{ 'class': 'form-control'}})}}
 						</div>
 						<div class="col-md-6">
@@ -67,24 +67,46 @@
 
 						</div>
 
-							{{ form_end(form)}}
+						{{ form_end(form)}}
 					</div>
-						{# on affiche les données de contact crée dans le service yam  #}
-					<div class="mb-3 my-5">
-						<div class="border  text-center text-white">
-							<p class="mb-0 font-weight-bold">Addresse</p>
-							<p class="mb-4">{{ contact_adress }}</p>
-
-							<p class="mb-0 font-weight-bold">Phone</p>
-							<p class="mb-4">
-								<a href="#">{{ contact_phone }}</a>
+					{# on affiche les données de contact crée dans le service yam  #}
+					<div class="border shadow rounded-3 mb-3 my-5 d-flex flex-wrap">
+						<div class="p-2 side-title m-auto">
+							<p>
+								<i class="fas fa-home me-3"></i>
+								{{ contact_adress }}</p>
+							<p>
+								<i class="fas fa-envelope me-3"></i>
+								<a href="mailto:izydrive@gmail.com">{{ contact_email }}</a>
+							</p>
+							<p>
+								<i class="fas fa-phone me-3"></i>
+								<a href="tel:+01.02.03.04.07">{{ contact_phone }}</a>
 							</p>
 
-							<p class="mb-0 font-weight-bold">Addresse email</p>
-							<p class="mb-0">
-								<a href="#">{{ contact_email }}</a>
-							</p>
-
+						</div>
+						<div class=" side-title m-auto">
+							<h4 class="text-center side-title">Retrouvez moi sur les reseaux :</h4>
+							<div class="d-flex justify-content-around">
+								<a href="https://github.com/essasoufiane" class="h2 text-decoration-none">
+									<i class="fab fa-facebook"></i>
+								</a>
+								<a href="https://github.com/essasoufiane" class="h2 text-decoration-none">
+									<i class="fab fa-instagram"></i>
+								</a>
+								<a href="https://github.com/essasoufiane" class="h2 text-decoration-none">
+									<i class="fab fa-snapchat-square"></i>
+								</a>
+								<a href="https://github.com/essasoufiane" class="h2 text-decoration-none">
+									<i class="fab fa-tiktok"></i>
+								</a>
+								<a href="https://github.com/essasoufiane" class="h2 text-decoration-none">
+									<i class="fab fa-whatsapp"></i>
+								</a>
+								<a href="https://github.com/essasoufiane" class="h2 text-decoration-none">
+									<i class="fab fa-twitter"></i>
+								</a>
+							</div>
 						</div>
 
 					</div>
