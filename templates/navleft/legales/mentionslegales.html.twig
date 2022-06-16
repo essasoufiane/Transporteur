@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Page Accueil | Home
+{% block title %}Les mentions légales 
 {% endblock %}
 
 {% block body %}
@@ -18,6 +18,10 @@
 	{# ----header desktop--- #}
 	<div class="app">
 		{% include "partials/header1.html.twig" %}
+		{% block temperature %}
+
+			{# <p class="text-white bold my-1 ">~ {{ville}} | {{temperature}}°C</p> #}
+		{% endblock %}
 		{# ----navbar left--- #}
 		<div class="wrapper">
 			<div class="left-side">
@@ -27,182 +31,64 @@
 			</div>
 
 			{# -----header mobile ---------- #}
-			<div class="main-container">
+
+			<div class="main-container ">
 				{% include "partials/headermobile.html.twig" %}
 
-				<div class="content-wrapper">
-					<div class="content-wrapper-header">
-						<div class="content-wrapper-context">
-							<h3 class="img-content">
-								Chauffeur privé
-							</h3>
-							<div class="content-text">Riche d’une expérience de conduite de 20 années, votre chauffeur maitrise 5 langues : anglais, français, espagnol, portugais et brésilien. Diplômé, il est titulaire du N° de licence.</div>
-							<button class="content-button bg-white  bold">
-								<a class="bg-white text-success text-decoration-none" href="{{path('app_contact')}}">Contactez</a>
-							</button>
-						</div>
-						<img class="content-wrapper-img" src="https://assets.codepen.io/3364143/glass.png" alt="">
-					</div>
-					{# <div class="content-section">
-																															<div class="content-section-title">Installed</div>
-																															<ul>
-																																<li class="adobe-product">
-																																	<div class="products">
-																																		<svg viewbox="0 0 52 52" style="border:1px solid #3291b8">
-																																			<g xmlns="http://www.w3.org/2000/svg">
-																																				<path d="M40.824 52H11.176C5.003 52 0 46.997 0 40.824V11.176C0 5.003 5.003 0 11.176 0h29.649C46.997 0 52 5.003 52 11.176v29.649C52 46.997 46.997 52 40.824 52z" fill="#061e26" data-original="#393687"/>
-																																				<path d="M12.16 39H9.28V11h9.64c2.613 0 4.553.813 5.82 2.44 1.266 1.626 1.9 3.76 1.9 6.399 0 .934-.027 1.74-.08 2.42-.054.681-.22 1.534-.5 2.561-.28 1.026-.66 1.866-1.14 2.52-.48.654-1.213 1.227-2.2 1.72-.987.494-2.16.74-3.52.74h-7.04V39zm0-12h6.68c.96 0 1.773-.187 2.44-.56.666-.374 1.153-.773 1.46-1.2.306-.427.546-1.04.72-1.84.173-.801.267-1.4.28-1.801.013-.399.02-.973.02-1.72 0-4.053-1.694-6.08-5.08-6.08h-6.52V27zM29.48 33.92l2.8-.12c.106.987.6 1.754 1.48 2.3.88.547 1.893.82 3.04.82s2.14-.26 2.98-.78c.84-.52 1.26-1.266 1.26-2.239s-.36-1.747-1.08-2.32c-.72-.573-1.6-1.026-2.64-1.36-1.04-.333-2.086-.686-3.14-1.06a7.36 7.36 0 01-2.78-1.76c-.987-.934-1.48-2.073-1.48-3.42s.54-2.601 1.62-3.761 2.833-1.739 5.26-1.739c.854 0 1.653.1 2.4.3.746.2 1.28.394 1.6.58l.48.279-.92 2.521c-.854-.666-1.974-1-3.36-1-1.387 0-2.42.26-3.1.78-.68.52-1.02 1.18-1.02 1.979 0 .88.426 1.574 1.28 2.08.853.507 1.813.934 2.88 1.28 1.066.347 2.126.733 3.18 1.16 1.053.427 1.946 1.094 2.68 2s1.1 2.106 1.1 3.6c0 1.494-.6 2.794-1.8 3.9-1.2 1.106-2.954 1.66-5.26 1.66-2.307 0-4.114-.547-5.42-1.64-1.307-1.093-1.987-2.44-2.04-4.04z" fill="#c1dbe6" data-original="#89d3ff"/>
-																																			</g>
-																																		</svg>
-																																		Photoshop
-																																	</div>
-																																	<span class="status">
-																																		<span class="status-circle green"></span>
-																																		Updated</span>
-																																	<div class="button-wrapper">
-																																		<button class="content-button status-button open">Open</button>
-																																		<div class="menu">
-																																			<button class="dropdown">
-																																				<ul>
-																																					<li><a href="#">Go to Discover</a></li>
-																																					<li><a href="#">Learn more</a></li>
-																																					<li><a href="#">Uninstall</a></li>
-																																				</ul>
-																																			</button>
-																																		</div>
-																																	</div>
-																																</li>
-																																<li class="adobe-product">
-																																	<div class="products">
-																																		<svg viewbox="0 0 52 52" style="border:1px solid #b65a0b">
-																																			<g xmlns="http://www.w3.org/2000/svg">
-																																				<path d="M40.824 52H11.176C5.003 52 0 46.997 0 40.824V11.176C0 5.003 5.003 0 11.176 0h29.649C46.997 0 52 5.003 52 11.176v29.649C52 46.997 46.997 52 40.824 52z" fill="#261400" data-original="#6d4c13"/>
-																																				<path d="M30.68 39h-3.24l-2.76-9.04h-8.32L13.72 39H10.6l8.24-28h3.32l8.52 28zm-6.72-12l-3.48-11.36L17.12 27h6.84zM37.479 12.24c0 .453-.16.84-.48 1.16-.32.319-.7.479-1.14.479-.44 0-.827-.166-1.16-.5-.334-.333-.5-.713-.5-1.14s.166-.807.5-1.141c.333-.333.72-.5 1.16-.5.44 0 .82.16 1.14.48.321.322.48.709.48 1.162zM37.24 39h-2.88V18.96h2.88V39z" fill="#e6d2c0" data-original="#ffbd2e"/>
-																																			</g>
-																																		</svg>
-																																		Illustrator
-																																	</div>
-																									
-																																	<span class="status">
-																																		<span class="status-circle"></span>
-																																		Update Available</span>
-																																	<div class="button-wrapper">
-																																		<button class="content-button status-button">Update this app</button>
-																																		<div class="pop-up">
-																																			<div class="pop-up__title">Update This App
-																																				<svg class="close" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle">
-																																					<circle cx="12" cy="12" r="10"/>
-																																					<path d="M15 9l-6 6M9 9l6 6"/>
-																																				</svg>
-																																			</div>
-																																			<div class="pop-up__subtitle">Adjust your selections for advanced options as desired before continuing.
-																																				<a href="#">Learn more</a>
-																																			</div>
-																																			<div class="checkbox-wrapper">
-																																				<input type="checkbox" id="check1" class="checkbox">
-																																				<label for="check1">Import previous settings and preferences</label>
-																																			</div>
-																																			<div class="checkbox-wrapper">
-																																				<input type="checkbox" id="check2" class="checkbox">
-																																				<label for="check2">Remove old versions</label>
-																																			</div>
-																																			<div class="content-button-wrapper">
-																																				<button class="content-button status-button open close">Cancel</button>
-																																				<button class="content-button status-button">Continue</button>
-																																			</div>
-																																		</div>
-																																		<div class="menu">
-																																			<button class="dropdown">
-																																				<ul>
-																																					<li><a href="#">Go to Discover</a></li>
-																																					<li><a href="#">Learn more</a></li>
-																																					<li><a href="#">Uninstall</a></li>
-																																				</ul>
-																																			</button>
-																																		</div>
-																																	</div>
-																																</li>
-																																<li class="adobe-product">
-																																	<div class="products">
-																																		<svg viewbox="0 0 52 52" style="border: 1px solid #C75DEB">
-																																			<g xmlns="http://www.w3.org/2000/svg">
-																																				<path d="M40.824 52H11.176C5.003 52 0 46.997 0 40.824V11.176C0 5.003 5.003 0 11.176 0h29.649C46.997 0 52 5.003 52 11.176v29.649C52 46.997 46.997 52 40.824 52z" fill="#3a3375" data-original="#3a3375"/>
-																																				<path d="M27.44 39H24.2l-2.76-9.04h-8.32L10.48 39H7.36l8.24-28h3.32l8.52 28zm-6.72-12l-3.48-11.36L13.88 27h6.84zM31.48 33.48c0 2.267 1.333 3.399 4 3.399 1.653 0 3.466-.546 5.44-1.64L42 37.6c-2.054 1.254-4.2 1.881-6.44 1.881-4.64 0-6.96-1.946-6.96-5.841v-8.2c0-2.16.673-3.841 2.02-5.04 1.346-1.2 3.126-1.801 5.34-1.801s3.94.594 5.18 1.78c1.24 1.187 1.86 2.834 1.86 4.94V30.8l-11.52.6v2.08zm8.6-5.24v-3.08c0-1.413-.44-2.42-1.32-3.021-.88-.6-1.907-.899-3.08-.899-1.174 0-2.167.359-2.98 1.08-.814.72-1.22 1.773-1.22 3.16v3.199l8.6-.439z" fill="#e4d1eb" data-original="#e7adfb"/>
-																																			</g>
-																																		</svg>
-																																		After Effects
-																																	</div>
-																																	<span class="status">
-																																		<span class="status-circle green"></span>
-																																		Updated</span>
-																																	<div class="button-wrapper">
-																																		<button class="content-button status-button open">Open</button>
-																																		<div class="menu">
-																																			<button class="dropdown">
-																																				<ul>
-																																					<li><a href="#">Go to Discover</a></li>
-																																					<li><a href="#">Learn more</a></li>
-																																					<li><a href="#">Uninstall</a></li>
-																																				</ul>
-																																			</button>
-																																		</div>
-																																	</div>
-																																</li>
-																															</ul>
-																														</div> #}
-					<div class="content-section">
-						<div class="content-section-title">Mentions légales</div>
-						<div class="apps-card">
-							<div class="app-card h-100">
-								<span>
-									IZY DRIVE
-								</span>
-								<div class="app-card__subtext">
-									<p>Directeur de la publication : Emmanuel Marc
-									RCS : Strasbourg 802 335 547 SISE
-									Capital social : 8000 €
-									Siège social : Aéroport de Strasbourg – 67000 Strasbourg
-									Tél : 03 83 33 01 01<br>
-									Email : IZYDRIVE@gmail.com</p>
-								
-								</div>
-								<div class="app-card-buttons"><img src="https://vtcexcellence.com/wp-content/uploads/2021/05/VTC-Toulouse-Chauffeur-jpg.jpg" alt="#">
-								{# <button class="content-button status-button">Update</button> #}
-									{# <div class="menu"></div> #}
-								</div>
-							</div>
-							<div class="app-card h-100">
-								<span>
-									GESTION DES DONNEES PERSONNELLES.
-								</span>
-								<div class="app-card__subtext">
-									<p>En France, Les données personnelles sont notamment protégées par la loi n° 78-87 du 6 janvier 1978, l’article L. 226-13 du Code pénal et la Directive Européenne du 24 octobre 1995. A l’occasion de l’utilisation du site www.izydrive.</p>
-								</div>
-								<div class="app-card-buttons"><img src="https://vtcexcellence.com/wp-content/uploads/2021/05/VTC-EXCELLENCE-SERVICE-CONCIERGERIE.jpg" alt="">
-								{# <button class="content-button status-button">Update</button> #}
-									{# <div class="menu"></div> #}
-								</div>
-							</div>
+				<div class="content-wrapper m-4 rounded">
+					<h1 class="text-centers ide-title">MENTIONS LÉGALES</h1>
+					<h2 class="side-title">Editeur du site :</h2>
+					<p>
+						Essaouari Soufiane<br>
+						9 rue de Condé<br>
+						33064 Bordeaux<br>
+						Siren : 881 694 939<br>
+						Tél : 07 66 65 65 99
 
-							<div class="app-card h-100">
-								<span>
-									LIMITATIONS CONTRACTUELLES
-								</span>
-								<div class="app-card__subtext">
-									<p>Le site Internet ne pourra être tenu responsable de dommages matériels liés à l’utilisation du site. De plus, l’utilisateur du site s’engage à accéder au site en utilisant un matériel conformé avec un navigateur de dernière génération mis-à-jour</p>
-								</div>
-								<div
-									class="app-card-buttons">
-									{# <button class="content-button status-button">Update</button> #}
-									<img
-									src="https://vtcexcellence.com/wp-content/uploads/2021/05/louer-un-vehicule-avec-chauffeur-a-toulouse-1.jpg" alt="#">
-								{# <div class="menu"></div> #}
-								</div>
-							</div>
-						</div>
-					</div>
+					</p>
+					<h2 class="side-title">Hébergement :</h2>
+					<p>
+						SAS OVH<br>
+						2 rue Kellermann<br>
+						59100 Roubaix - France<br>
+						Site Web : www.ovh.com
+					</p>
+					<h2 class="side-title">Conditions d’utilisation :</h2>
+					Ce site est proposé en différents langages web (HTML, HTML5, Javascript, CSS, etc…) pour un meilleur confort d’utilisation et un graphisme plus agréable, nous vous recommandons de recourir à des navigateurs modernes comme Internet explorer, Safari, Firefox, Google Chrome, etc…<br>
+All In Drive met en œuvre tous les moyens dont elle dispose, pour assurer une information fiable et une mise à jour fiable de son site internet. Toutefois, des erreurs ou omissions peuvent survenir. L’internaute devra donc s’assurer de l’exactitude des informations auprès de All In Drive, et signaler toutes modifications du site qu’il jugerait utile. All In Drive n’est en aucun cas responsable de l’utilisation faite de ces informations, et de tout préjudice direct ou indirect pouvant en découler.
+					<h2 class="side-title">Cookies :</h2>
+					<p>Le site all-indrive.fr peut-être amené à vous demander l’acceptation des cookies pour des besoins de statistiques et d’affichage. Un cookies est une information déposée sur votre disque dur par le serveur du site que vous visitez. Il contient plusieurs données qui sont stockées sur votre ordinateur dans un simple fichier texte auquel un serveur accède pour lire et enregistrer des informations . Certaines parties de ce site ne peuvent être fonctionnelles sans l’acceptation de cookies.</p>
+					<h2 class="side-title">Liens hypertextes :</h2>
+					<p>Les sites internet peuvent offrir des liens vers d’autres sites internet ou d’autres ressources disponibles sur Internet. All In Drive ne dispose d’aucun moyen pour contrôler les sites en connexion avec ses sites internet. All In Drive ne répond pas de la disponibilité de tels sites et sources externes, ni ne le garantit. All-In Drive ne peut être tenu pour responsable de tout dommage, de quelque nature que ce soit, résultant du contenu de ces sites ou sources externes, et notamment des informations, produits ou services qu’ils proposent, ou de tout usage qui peut être fait de ces éléments. Les risques liés à cette utilisation incombent pleinement à l’internaute, qui doit se conformer à leurs conditions d’utilisation.<br><br>Les utilisateurs, les abonnés et les visiteurs des sites internet de All In Drive ne peuvent pas mettre en place un hyperlien en direction de ce site sans l’autorisation expresse et préalable de All In Drive.<br><br>Dans l’hypothèse où un utilisateur ou visiteur souhaiterait mettre en place un hyperlien en direction d’un des sites internet de All In Drive, il lui appartiendra d’adresser un email accessible sur le site afin de formuler sa demande de mise en place d’un hyperlien. All In Drive se réserve le droit d’accepter ou de refuser un hyperlien sans avoir à en justifier sa décision.</p>
+					<h2 class="side-title">Services fournis :</h2>
+					<p>L’ensemble des activités de la société ainsi que ses informations sont présentées sur notre site all-indrive.fr.
+All In Drive s’efforce de fournir sur le site all-indrive.fr des informations aussi précises que possible. Les renseignements figurant sur le site all-indrive.fr ne sont pas exhaustifs et les photos non contractuelles. Ils sont donnés sous réserve de modifications ayant été apportées depuis leur mise en ligne. Par ailleurs, toutes les informations indiquées sur le site all-indrive.fr sont données à titre indicatif, et sont susceptibles de changer ou d’évoluer sans préavis.</p>
+					<h2 class="side-title">Limitation contractuelles sur les données :</h2>
+					<p>Les informations contenues sur ce site sont aussi précises que possible et le site remis à jour à différentes périodes de l’année, mais peut toutefois contenir des inexactitudes ou des omissions. Si vous constatez une lacune, erreur ou ce qui parait être un dysfonctionnement, merci de bien vouloir le signaler par email, à l’adresse flora @ all-indrive.fr, en décrivant le problème de la manière la plus précise possible (page posant problème, type d’ordinateur et de navigateur utilisé, …).<br><br>Tout contenu téléchargé se fait aux risques et périls de l’utilisateur et sous sa seule responsabilité. En conséquence, All In Drivene saurait être tenue responsable d’un quelconque dommage subi par l’ordinateur de l’utilisateur ou d’une quelconque perte de données consécutive au téléchargement. De plus, l’utilisateur du site s’engage à accéder au site en utilisant un matériel récent, ne contenant pas de virus et avec un navigateur de dernière génération mis-à-jour.
+Les liens hypertextes mis en place dans le cadre du présent site internet en direction d’autres ressources présentes sur le réseau Internet ne sauraient engager la responsabilité de All In Drive.</p>
+					<h2 class="side-title">Propriété intellectuelle :</h2>
+					<p>Tout le contenu du présent site all-indrive.fr, incluant, de façon non limitative, les graphismes, images, textes, vidéos, animations, sons, logos, gifs et icônes ainsi que leur mise en forme sont la propriété exclusive de la société à l’exception des marques, logos ou contenus appartenant à d’autres sociétés partenaires ou auteurs.<br><br>Toute reproduction, distribution, modification, adaptation, retransmission ou publication, même partielle, de ces différents éléments est strictement interdite sans l’accord exprès par écrit de All In Drive. Cette représentation ou reproduction, par quelque procédé que ce soit, constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle. Le non-respect de cette interdiction constitue une contrefaçon pouvant engager la responsabilité civile et pénale du contrefacteur. En outre, les propriétaires des contenus copiés pourraient intenter une action en justice à votre encontre.</p>
+					<h2 class="side-title">RGPD :</h2>
+					<p>Dans le cadre de ce site internet, seules les inscriptions à la newsletter font l'objet de stockage d'information. L'email du contact est ainsi collecté et à destination unique de All In Drive pour l'informer de ses actualités.</p>
+					<h2 class="side-title">Durée de conservation des données :</h2>
+					<p>All In Drive conserve vos données pour la durée nécessaire aux opérations pour lesquelles elles ont été collectées et dans le respect de la législation en vigueur.</p>
+					<h2 class="side-title">Sécurité de vos données personnelles :</h2>
+					<p>Toutes les mesures nécessaires sont prises pour assurer la sécurité de vos données personnelles.
+</p>
+					<h2 class="side-title">Désignation d'un délégué à la Protection des données :</h2>
+					<p>All In Drive délègue à son prestataire / fournisseur la mission de veiller au respect du RGPD. Votre interlocuteur direct, pour toutes questions relatives au traitement des données personnelles est joignable par courrier à l'adresse suivante :
+YM-Studio : Délégué DPD - 10 Rue du Monastère 33440 Ambares et Lagrave.</p>
+					<h2 class="side-title">Litiges :</h2>
+					<p>Les présentes conditions du site all-indrive.fr sont régies par les lois françaises et toute contestation ou litiges qui pourraient naître de l’interprétation ou de l’exécution de celles-ci seront de la compétence exclusive des tribunaux dont dépend le siège social de la société. La langue de référence, pour le règlement de contentieux éventuels, est le français.</p>
+					<h2 class="side-title">Données personnelles :</h2>
+					<p>De manière générale, vous n’êtes pas tenu de nous communiquer vos données personnelles lorsque vous visitez notre site Internet all-indrive.fr.<br><br>Cependant, ce principe comporte certaines exceptions. En effet, pour certains services proposés par notre site, vous pouvez être amenés à nous communiquer certaines données telles que : votre nom, votre fonction, le nom de votre société, votre adresse électronique, et votre numéro de téléphone. Tel est le cas lorsque vous remplissez le formulaire qui vous est proposé en ligne, dans la rubrique « contact ».<br><br>Dans tous les cas, vous pouvez refuser de fournir vos données personnelles. Dans ce cas, vous ne pourrez pas utiliser les services du site, notamment celui de solliciter des renseignements sur notre société, ou de recevoir les lettres d’information.<br><br>Enfin, nous pouvons collecter de manière automatique certaines informations vous concernant lors d’une simple navigation sur notre site Internet, notamment : des informations concernant l’utilisation de notre site, comme les zones que vous visitez et les services auxquels vous accédez, votre adresse IP, le type de votre navigateur, vos temps d’accès.<br><br>De telles informations sont utilisées exclusivement à des fins de statistiques internes, de manière à améliorer la qualité des services qui vous sont proposés. Les bases de données sont protégées par les dispositions de la loi du 1er juillet 1998 transposant la directive 96/9 du 11 mars 1996 relative à la protection juridique des bases de données.</p>
 
-					<div class="overlay-app"></div>
+
+
+
 				</div>
+			</div>
+			<div class="overlay-app"></div>
+		</div>
 
-			{% endblock %}
+	{% endblock %}

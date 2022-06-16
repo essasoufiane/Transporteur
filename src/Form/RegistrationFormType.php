@@ -12,8 +12,10 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 
 class RegistrationFormType extends AbstractType
 {
@@ -46,21 +48,30 @@ class RegistrationFormType extends AbstractType
                 "label" => "Age",
                 "attr"  => ["placeholder" => "25"]
             ])
-            ->add('plainPassword', PasswordType::class, [
-                'mapped' => false,
-                'attr' => ['autocomplete' => 'new-password'],
-                'constraints' => [
-                    new NotBlank([
-                        'message' => 'Please enter a password',
-                    ]),
-                    new Length([
-                        'min' => 6,
-                        'minMessage' => 'Your password should be at least {{ limit }} characters',
-                        // max length allowed by Symfony for security reasons
-                        'max' => 4096,
-                    ]),
-                ],
-            ]);
+            ->add('password', RepeatedType::class,[
+
+                
+                'type'=>PasswordType::class,
+                'invalid_message'=>'Le mot de passe et la confirmation doit être identique', 
+                'label'=>'Confirmez votre mot de passe',
+                
+                'required'=> true, 
+                'first_options'=>[
+                'label'=>'Mot de passe',
+                'attr'=>[
+                    'placeholder'=>'Merci de saisir votre mot de passe.']], 
+                'second_options'=>['label'=>'Confirmez votre mot de passe',
+                
+                'attr'=>[
+                    'placeholder'=>'Merci de confirmer votre mot de passe.']
+                ]
+                
+                ])
+
+            
+           
+                
+        ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void

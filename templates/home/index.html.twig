@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Page Accueil | Home
+{% block title %}Accueil
 {% endblock %}
 
 {% block body %}
@@ -27,15 +27,23 @@
 			</div>
 
 			{# -----header mobile ---------- #}
-			<div class="main-container">
+			<main class="main-container">
 				{% include "partials/headermobile.html.twig" %}
 
 				<div class="content-wrapper">
-					<div class="content-wrapper-header">
+					<section class="content-wrapper-header">
 						<div class="content-wrapper-context">
-							<h2 class="img-content">
+
+							
+						{{ville}} à {{temperature}}°C
+						{# {{deg}} #}
+						{# <p>{{ feel_like}}</p> #}
+							<p>Ciel {{weather}} et {{ description}}</p>
+							<p>Avec un vent allant de {{vent }}km/h</p>
+							<br>
+							<h1 class="img-content">
 								Votre chauffeur privé
-							</h2>
+							</h1>
 
 							<div class="content-text">Un service de transport de qualité, rapide et efficace.
 							</div>
@@ -43,10 +51,11 @@
 							<button class="content-button  animate__flipInY animate__animated">
 								<a class="text-decoration-none text-white" href="{{path('app_order_new')}}">Réservez!</a>
 							</button>
+						
 						</div>
 
-						<img class="content-wrapper-img  w-75" min-heigth="150px" src="{{asset('assets/images/chauffeurvtc.png')}}" alt="">
-					</div>
+						<img class="content-wrapper-img desk  w-75" min-heigth="150px" src="{{asset('assets/images/chauffeurvtc.png')}}" alt="">
+					</section>
 					<h2 class="text-center py-3 animate__backInRight animate__animated ">Disponible 24/24h 7/7j</h2>
 
 					{# -----carousel---------- #}
@@ -74,11 +83,10 @@
 					</div>
 
 
-					<div
-						class="content-section">
+					<section class="content-section">
 						{# <div class="content-section-title">Apps in your plan</div> #}
 						<div class="apps-card">
-							<article class="app-card">
+							<article class="app-card ">
 								<span>
 									Un tarif connu à l’avance et sans surprise à l’arrivée
 								</span>
@@ -90,7 +98,7 @@
 								</div>
 							</article>
 
-							<article class="app-card">
+							<article class="app-card ">
 								<span>
 									Facilité de paiement
 								</span>
@@ -118,9 +126,9 @@
 								</div>
 							</article>
 						</div>
-					</div>
+					</section>
 				</div>
-			</div>
+			</main>
 		</div>
 		<div class="overlay-app"></div>
 	</div>

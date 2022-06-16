@@ -889,11 +889,7 @@ body.light-mode .video-bg:before {
 
 .fa-times { display: none; }
 
-// ---liste--menu--navleft--mobile---
 
-ul {
-  list-style-type: none;
-}
 .text-none{
   text-decoration: none;
 
@@ -902,15 +898,18 @@ ul {
 
 // card a  propos 
 
-.apps-card {
-  align-items: flex-start;
-  text-justify: auto;
-  .app-card{
-    min-height: 300px;
-    margin-top: auto;
-   
- }
-}
+@media screen and (min-width: 1010px) {
+  .apps-card {
+    align-items: flex-start;
+    .app-card{
+      min-height: 510px;
+      display:flex;
+      flex-direction:column;
+  
+   }
+  }
+   }
+
 
 
 

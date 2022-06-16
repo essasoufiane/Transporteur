@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Page Accueil | Home
+{% block title %}Page de connexion
 {% endblock %}
 
 {% block body %}
@@ -30,59 +30,60 @@
 			<div class="main-container">
 				{% include "partials/headermobile.html.twig" %}
 
-				<div class="content-wrapper">
-					<div class="content-wrapper-header">
-						{# <div class="content-wrapper-context container">
-							<h1 class="container text-center ">Inscrivez-vous
+				<div
+					class="content-wrapper">
+
+
+					{# formulaire inscription  #}
+					<div class="container w-75 ">
+
+						<form method="post" class="w-100">
+							{% if error %}
+								<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+							{% endif %}
+
+							{% if app.user %}
+								<div class="mb-3">
+									Vous êtes connecté en tant que
+									{{ app.user.userIdentifier }},
+									<a href="{{ path('app_logout') }}">Déconnection</a>
+								</div>
+							{% endif %}
+
+							<h1 class="h3 mb-3 font-weight-normal my-5 p-3">Merci de vous connecter
 							</h1>
-						</div> #}
-					</div>
-			
-				{# formulaire inscription  #}
-				<div class="container w-75 ">
-
-					<form method="post" class="w-100">
-						{% if error %}
-							<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-						{% endif %}
-
-						{% if app.user %}
-							<div class="mb-3">
-								Vous êtes connecté en tant que
-								{{ app.user.userIdentifier }},
-								<a href="{{ path('app_logout') }}">Déconnection</a>
-							</div>
-						{% endif %}
-
-						<h1 class="h3 mb-3 font-weight-normal my-5 p-3">Merci de vous connecter
-						</h1>
-						<label class=" text-white p-2" for="inputEmail">Votre adresse email
-						</label>
-						<input type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="merci de saisir votre adresse email" class="form-control" autocomplete="email" required autofocus>
-						<label for="inputPassword" class="text-white p-2">Password</label>
-						<input type="password" name="password" id="inputPassword" placeholder="merci de saisir votre mot de passe " class="form-control" autocomplete="current-password" required>
-
-						<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-
-
-						<div class="checkbox mb-3">
-							<label>
-								<input type="checkbox" name="_remember_me">
-								Se souvenir de moi
+							<label class=" text-white p-2" for="inputEmail">Votre adresse email
 							</label>
-						</div>
+							<input type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="merci de saisir votre adresse email" class="form-control" autocomplete="email" required autofocus>
+							<label for="inputPassword" class="text-white p-2">Votre mot de passe </label>
+							<input type="password" name="password" id="inputPassword" placeholder="merci de saisir votre mot de passe " class="form-control" autocomplete="current-password" required>
+
+							<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+							<div class="container-fluid w-100">
 
 
-						<button class="btn btn-lg btn-success btn-block my-2" type="submit">
-							Se connecter
-						</button>
-					</form>
+								<div class="mb-3 my-3">
+
+									<input type="checkbox" name="_remember_me">
+									Se souvenir de moi
+									<a style="margin-left:70px" class="text-decoration-none text-warning" href="{{ path('app_forgot_password_request') }}">
+										Mot de passe oublié
+									</a>
+								</div>
+							</div>
+				
+
+
+							<button class="btn btn-lg btn-success btn-block my-2" type="submit">
+								Se connecter
+							</button>
+						</form>
+					</div>
+					{# fin du foàrmulaire  #}
+
+
+					<div class="overlay-app"></div>
 				</div>
-				{# fin du foàrmulaire  #}
-
-
-			
-
-		<div class="overlay-app"></div>
-	</div>
-</div>{% endblock %}
+			</div>
+		{% endblock %}
