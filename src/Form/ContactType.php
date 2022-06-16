@@ -33,7 +33,7 @@ class ContactType extends AbstractType
             ])
             ->add('message', TextareaType::class,  [
                
-                "attr"  => ["placeholder" => "Merci d\'écrire votre message ici ...........svp"]
+                "attr"  => ["placeholder" => "Merci d'écrire votre message ici ...........svp"]
             ])  
         ;
     }
