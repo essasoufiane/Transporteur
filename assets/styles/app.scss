@@ -898,15 +898,18 @@ body.light-mode .video-bg:before {
 
 // card a  propos 
 
-.apps-card {
-  align-items: flex-start;
-  .app-card{
-    min-height: 510px;
-    display:flex;
-    flex-direction:column;
+@media screen and (min-width: 1010px) {
+  .apps-card {
+    align-items: flex-start;
+    .app-card{
+      min-height: 510px;
+      display:flex;
+      flex-direction:column;
+  
+   }
+  }
+   }
 
- }
-}
 
 
 
