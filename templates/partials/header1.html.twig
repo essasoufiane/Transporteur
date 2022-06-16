@@ -4,11 +4,11 @@
 	<a href="{{path('home_page')}}">
 	<img class="desk " src="{{asset('assets/images/logo.png')}}" alt="logo izy drive"></a>
 	<a class="menuSelector mob text-white">
-		<i class="fas fa-bars"></i>
-		<i class="fas fa-times"></i>
+		<i class="fas fa-bars  side-title pt-3"></i>
+		<i class="fas fa-times  side-title pt-3"></i>
 	</a>
 	<a class="mob ml-auto" href="{{path('home_page')}}"><img src="{{asset('assets/images/logo.png')}}" alt="logo izy drive"></a>
-	<div class="header-menu">
+	<nav class="header-menu">
 		<a class="menu-link is-active desk" href="{{path('home_page')}}">Accueil</a>
 		<a class="menu-link notify desk" href="{{path('app_order_new')}}">Commander une course</a>
 		{% if is_granted('ROLE_ADMIN') %}
@@ -25,11 +25,11 @@
 			<a class="menu-link notify desk" href="{{path('app_register')}}">Inscription</a>
 			<a class="menu-link desk" href="{{path('app_contact')}}">Contact</a>
 		{% endif %}
-	</div>
+	</nav>
 
 	<div class="header-profile">
 	{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_USER')  %}
-		<a href="{{path('app_logout')}}" class="text-white pr-3 deco hvr-grow" title="Déconnexion">
+		<a href="{{path('app_logout')}}" class=" side-title pt-3 pr-3 deco hvr-grow" title="Déconnexion">
 			<i class="fas fa-sign-out-alt animate__backInDown animate__animated"></i>
 		</a>
 		
