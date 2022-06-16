@@ -27,11 +27,11 @@
 			</div>
 
 			{# -----header mobile ---------- #}
-			<div class="main-container">
+			<main class="main-container">
 				{% include "partials/headermobile.html.twig" %}
 
 				<div class="content-wrapper">
-					<div class="content-wrapper-header">
+					<section class="content-wrapper-header">
 						<div class="content-wrapper-context">
 
 							
@@ -39,9 +39,9 @@
 							<p>Ciel {{weather}} et {{ description}}</p>
 							<p>Avec un vent allant de {{vent }}km/h</p>
 							<br>
-							<h2 class="img-content">
+							<h1 class="img-content">
 								Votre chauffeur privé
-							</h2>
+							</h1>
 
 							<div class="content-text">Un service de transport de qualite, rapide et efficace.
 							</div>
@@ -53,7 +53,7 @@
 						</div>
 
 						<img class="content-wrapper-img desk  w-75" min-heigth="150px" src="{{asset('assets/images/chauffeurvtc.png')}}" alt="">
-					</div>
+					</section>
 					<h2 class="text-center py-3 animate__backInRight animate__animated ">Disponible 24/24h 7/7j</h2>
 
 					{# -----carousel---------- #}
@@ -81,11 +81,10 @@
 					</div>
 
 
-					<div
-						class="content-section">
+					<section class="content-section">
 						{# <div class="content-section-title">Apps in your plan</div> #}
 						<div class="apps-card">
-							<article class="app-card">
+							<article class="app-card h-100">
 								<span>
 									Un tarif connu à l’avance et sans surprise à l’arrivée
 								</span>
@@ -97,7 +96,7 @@
 								</div>
 							</article>
 
-							<article class="app-card">
+							<article class="app-card h-100">
 								<span>
 									Facilité de paiement
 								</span>
@@ -110,7 +109,7 @@
 								</div>
 							</article>
 
-							<article class="app-card">
+							<article class="app-card h-100">
 								<span>
 									Accessible 24h/24 et 7 jours/7
 								</span>
@@ -125,9 +124,9 @@
 								</div>
 							</article>
 						</div>
-					</div>
+					</section>
 				</div>
-			</div>
+			</main>
 		</div>
 		<div class="overlay-app"></div>
 	</div>
