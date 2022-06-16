@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Page Accueil | Home
+{% block title %}Mes commandes
 {% endblock %}
 
 {% block body %}
@@ -27,7 +27,7 @@
 			</div>
 
 			{# -----header mobile ---------- #}
-			<div class="main-container">
+			<main class="main-container">
 				{% include "partials/headermobile.html.twig" %}
 
 				<div class="content-wrapper">
@@ -39,7 +39,7 @@
 					</div>
 
 					{# formulaire inscription  #}
-					<div class="content-section text-white">
+					<section class="content-section text-white">
 						{# <div class="content-section-title">Mes commandes</div> #}
 						<ul>
 							<li class="adobe-product">
@@ -82,10 +82,10 @@
 						{# fin du foàrmulaire  #}
 
 
-					</div>
+					</section>
 				</div>
 
 				<div class="overlay-app"></div>
-			</div>
+			</main>
 		</div>
 	{% endblock %}
