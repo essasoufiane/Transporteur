@@ -33,10 +33,6 @@
 				<div class="content-wrapper">
 					<div class="content-wrapper-header">
 						<div class="content-wrapper-context">
-						{{ville}} à {{temperature}}°C
-							<p>{{weather}} et {{ description}}</p>
-							<p>Avec un vent allant de {{vent }}</p>
-							<hr><br>
 							<h2 class="img-content">
 								Votre chauffeur privé
 							</h2>
@@ -47,9 +43,13 @@
 							<button class="content-button  animate__flipInY animate__animated">
 								<a class="text-decoration-none text-white" href="{{path('app_order_new')}}">Reservez!</a>
 							</button>
+							<hr><br>
+						{{ville}} à {{temperature}}°C
+							<p>{{weather}} et {{ description}}</p>
+							<p>Avec un vent allant de {{vent }}</p>
 						</div>
 
-						<img class="content-wrapper-img  w-75" min-heigth="150px" src="{{asset('assets/images/chauffeurvtc.png')}}" alt="">
+						<img class="content-wrapper-img desk  w-75" min-heigth="150px" src="{{asset('assets/images/chauffeurvtc.png')}}" alt="">
 					</div>
 					<h2 class="text-center py-3 animate__backInRight animate__animated ">Disponible 24/24h 7/7j</h2>
 
