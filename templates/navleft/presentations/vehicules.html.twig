@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Page Accueil | Home
+{% block title %}Mes vehicules
 {% endblock %}
 
 {% block body %}
@@ -27,24 +27,20 @@
 			</div>
 
 			{# -----header mobile ---------- #}
-			<div class="main-container">
+			<main class="main-container">
 				{% include "partials/headermobile.html.twig" %}
 
 				<div class="content-wrapper">
-					<div class="content-wrapper-header justify-content-center">
+					<section class="content-wrapper-header justify-content-center">
 						<div class="content ">
 							<h3 class="img-content ">
 								Véhicules
 							</h3>
 							<div class="content-text ">Riche d’une expérience de conduite de 20 années, votre chauffeur s'adapte à toutes vos situation. Pour tous vos déplacements privés ou professionnels.</div>
-							<button class="content-button bg-white  bold">
-								<a class="bg-white text-success text-decoration-none" href="{{path('app_contact')}}">Contactez</a>
-							</button>
 						</div>
-						<img class="content-wrapper-img" src="" alt="">
-					</div>
+					</section>
 
-					<div class="content-section">
+					<section class="content-section">
 						<div class="content-section-title">Notre flotte de vehicule</div>
 						<div class="apps-card">
 							<div class="app-card h-100">
@@ -89,9 +85,9 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</section>
 				</div>
-			</div>
+			</main>
 		</div>
 		<div class="overlay-app"></div>
 	</div>

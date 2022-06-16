@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Page Accueil | Home
+{% block title %}Mise à disposition
 {% endblock %}
 
 {% block body %}
@@ -32,19 +32,21 @@
 
 			{# -----header mobile ---------- #}
 
-			<div class="main-container ">
+			<main class="main-container ">
 				{% include "partials/headermobile.html.twig" %}
 
-				<div class="content-wrapper m-4 rounded">
+				<section class="content-wrapper m-4 rounded">
 					<h1 class="text-center side-title">Une prestation de transport sur-mesure et flexible.</h1>
-				<p class="text-center animate__fadeInTopRight animate__animated"><i class="fas fa-car"></i></p>
+					<p class="text-center animate__fadeInTopRight animate__animated">
+						<i class="fas fa-car"></i>
+					</p>
 					<p>Nos chauffeurs, parlant anglais et connaissant bien Paris (ainsi que toutes ses adresses prestigieuses) pourront vous conseiller selon vos envies et vos besoins. Ils font preuve d’une grande discrétion garantissant votre tranquillité et la confidentialité de tous vos déplacements. Possédant un permis spécialisé dans le transport de personnes et une philosophie de la Grande Remise, ils seront capables de s’adapter à toutes situations.
-						
-						Notre parc de véhicules est composé de Berlines et de Vans pour répondre à toutes vos attentes.</p>
+																		
+																		Notre parc de véhicules est composé de Berlines et de Vans pour répondre à toutes vos attentes.</p>
 
-				</div>
-			</div>
+				</section>
+			</main>
 			<div class="overlay-app"></div>
 		</div>
-
-	{% endblock %}
+	</div>
+{% endblock %}
