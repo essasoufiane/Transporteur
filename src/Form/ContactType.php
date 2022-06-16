@@ -3,11 +3,12 @@
 namespace App\Form;
 
 use App\Entity\Contact;
-use EasyCorp\Bundle\EasyAdminBundle\Form\Extension\CollectionTypeExtension;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use EasyCorp\Bundle\EasyAdminBundle\Form\Extension\CollectionTypeExtension;
 
 class ContactType extends AbstractType
 {
@@ -18,6 +19,11 @@ class ContactType extends AbstractType
             ->add('lastName')
             ->add('email')
             ->add('message')
+            
+            // ->add('submit', SubmitType::class,
+            // [
+            //     'label'=>"S'inscrire",
+            // ] )
         ;
     }
 

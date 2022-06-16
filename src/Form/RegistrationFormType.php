@@ -52,6 +52,7 @@ class RegistrationFormType extends AbstractType
 
                 
                 'type'=>PasswordType::class,
+               
                 'invalid_message'=>'Le mot de passe et la confirmation doit être identique', 
                 'label'=>'Confirmez votre mot de passe',
                 
