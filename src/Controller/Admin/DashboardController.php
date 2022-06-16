@@ -34,6 +34,7 @@ class DashboardController extends AbstractDashboardController
     {
         return Dashboard::new()
             ->setTitle('TRANSPORTEUR ');
+           
     }
 
     public function configureMenuItems(): iterable
