@@ -30,8 +30,9 @@
 			<div class="main-container">
 				{% include "partials/headermobile.html.twig" %}
 
-				<div class="content-wrapper">
-				
+				<div
+					class="content-wrapper">
+
 
 					{# formulaire inscription  #}
 					<div class="container w-75 ">
@@ -58,19 +59,20 @@
 							<input type="password" name="password" id="inputPassword" placeholder="merci de saisir votre mot de passe " class="form-control" autocomplete="current-password" required>
 
 							<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-							
-							<div class="container-fluid w-100" >
-							
-								
-								<div><input type="checkbox" name="_remember_me">
-									Remember me
-									<a class="text-decoration-none text-warning" href="{{ path('app_forgot_password_request') }}">
+
+							<div class="container-fluid w-100">
+
+
+								<div class="mb-3 my-3">
+
+									<input type="checkbox" name="_remember_me">
+									Se souvenir de moi
+									<a style="margin-left:70px" class="text-decoration-none text-warning" href="{{ path('app_forgot_password_request') }}">
 										Mot de passe oublié
 									</a>
-									</div>
+								</div>
 							</div>
-								
-							
+				
 
 
 							<button class="btn btn-lg btn-success btn-block my-2" type="submit">
