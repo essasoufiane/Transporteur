@@ -30,8 +30,9 @@
 			<div class="main-container">
 				{% include "partials/headermobile.html.twig" %}
 
-				<div class="content-wrapper">
-				
+				<div
+					class="content-wrapper">
+
 
 					{# formulaire inscription  #}
 					<div class="container w-75 ">
@@ -48,8 +49,9 @@
 									<a href="{{ path('app_logout') }}">Déconnection</a>
 								</div>
 							{% endif %}
-
-							<h1 class="h3 mb-3 font-weight-normal my-5 p-3">Merci de vous connecter
+							<section class="content-wrapper-header">
+								<h1 class="text-center">Connexion
+								</section>
 							</h1>
 							<label class=" text-white p-2" for="inputEmail">Votre adresse email
 							</label>
@@ -58,19 +60,17 @@
 							<input type="password" name="password" id="inputPassword" placeholder="merci de saisir votre mot de passe " class="form-control" autocomplete="current-password" required>
 
 							<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-							
-							<div class="container-fluid w-100" >
-							
-								
+
+							<div class="container-fluid w-100">
+
+
 								<div><input type="checkbox" name="_remember_me">
-									Remember me
+									Se rapeller de moi
 									<a style="margin-left:40px" class="" href="{{ path('app_forgot_password_request') }}">
 										Mot de passe oublié
 									</a>
-									</div>
+								</div>
 							</div>
-								
-							
 
 
 							<button class="btn btn-lg btn-success btn-block my-2" type="submit">
