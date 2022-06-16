@@ -36,10 +36,7 @@ class ContactType extends AbstractType
                 "attr"  => ["placeholder" => "Merci d\'écrire votre message ici ...........svp"]
             ])
             
-            // ->add('submit', SubmitType::class,
-            // [
-            //     'label'=>"S'inscrire",
-            // ] )
+          
         ;
     }
 
