@@ -35,24 +35,24 @@
 				<table class="table">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ order.id }}</td>
+                <th class="side-title">Id</th>
+                <td class="side-title">{{ order.id }}</td>
             </tr>
             <tr>
-                <th>Départ</th>
-                <td>{{ order.depart }}</td>
+                <th class="side-title">Départ</th>
+                <td class="side-title">{{ order.depart }}</td>
             </tr>
             <tr>
-                <th>Déstination</th>
-                <td>{{ order.destination }}</td>
+                <th class="side-title">Déstination</th>
+                <td class="side-title">{{ order.destination }}</td>
             </tr>
             <tr>
-                <th>Date de départ</th>
-                <td>{{ order.dateReservation ? order.dateReservation|date('Y-m-d H:i:s') : '' }}</td>
+                <th class="side-title">Date de départ</th>
+                <td class="side-title">{{ order.dateReservation ? order.dateReservation|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
             <tr>
-                <th>Date de reservation</th>
-                <td>{{ order.dateCreation ? order.dateCreation|date('Y-m-d H:i:s') : '' }}</td>
+                <th class="side-title">Date de reservation</th>
+                <td class="side-title">{{ order.dateCreation ? order.dateCreation|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
         </tbody>
     </table>
