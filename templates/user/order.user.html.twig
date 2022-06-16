@@ -43,32 +43,34 @@
 						{# <div class="content-section-title">Mes commandes</div> #}
 						<ul>
 							<li class="adobe-product">
-								<div class="products">Identifiant
+								<div class="products side-title">Identifiant
 								</div>
-								<div class="products">Depart
+								<div class="products side-title">Depart
 								</div>
-								<span class="status">Destination
+								<span class="status side-title">Destination
 								</span>
-								<span class="status">Date de départ
+								<span class="status side-title">Date de départ
 								</span>
-								<span class="status">Date de réservation
+								<span class="status side-title desk">Date de réservation
 								</span>
 							</li>
 							{% for order in app.user.orders %}
-
+<a href="{{ path('app_order_show', {'id': order.id}) }}">
 								<li class="adobe-product">
-									<div class="products">{{ order.id }}
+									<div class="products text-decoration-none side-title">{{ order.id }}
 									</div>
-									<div class="products">{{ order.depart }}
+									<div class="products text-decoration-none side-title">{{ order.depart }}
 									</div>
-									<span class="status">{{ order.destination }}
+									<span class="status text-decoration-none side-title">{{ order.destination }}
 									</span>
-									<span class="status">{{ order.dateReservation ? order.dateReservation|date('Y-m-d H:i:s') : '' }}
+									<span class="status text-decoration-none side-title">{{ order.dateReservation ? order.dateReservation|date('Y-m-d H:i:s') : '' }}
 									</span>
-									<span class="status">{{ order.dateCreation ? order.dateCreation|date('Y-m-d H:i:s') : '' }}
+									<span class="status text-decoration-none side-title desk">{{ order.dateCreation ? order.dateCreation|date('Y-m-d H:i:s') : '' }}
 									</span>
+									{# <span class="status"><a href="{{ path('app_order_show', {'id': order.id}) }}">voir</a>
+									</span> #}
 
-								</li>
+								</li></a>
 							{% else %}
 								<li class="adobe-product">
 									<div class="products">Il n'y a aucune commade acutuellement !

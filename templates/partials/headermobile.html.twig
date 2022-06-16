@@ -7,11 +7,11 @@
 		{% if is_granted('ROLE_ADMIN') %}
 			{# <a class="main-header-link" href="{{path('home_page')}}">Accueil</a> #}
 			<a class="main-header-link" href="{{path('app_contact')}}">Contact</a>
-			<a class="main-header-link" href="{{path('show_order')}}">Mes commandes</a>
+			<a class="main-header-link" href="{{path('show_order')}}">Commandes</a>
 			<a class="main-header-link" href="{{path('navleftMobile')}}">Plus</a>
 		{% elseif is_granted('ROLE_USER') %}
 			{# <a class="main-header-link" href="{{path('home_page')}}">Accueil</a> #}
-			<a class="main-header-link" href="{{path('show_user')}}">Mon profil</a>
+			<a class="main-header-link" href="{{path('show_user')}}">Profil</a>
 			<a class="main-header-link is-active" href="{{path('show_order')}}">Mes commandes</a>
 			<a class="main-header-link" href="{{path('navleftMobile')}}">Plus <i class="fas fa-plus"></i></a>
 		{% else %}

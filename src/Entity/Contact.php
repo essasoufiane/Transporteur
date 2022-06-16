@@ -14,15 +14,28 @@ class Contact
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Assert\Length(
+        min: 2,
+        max: 50,
+        minMessage: 'Le nom est trop court ! Minimum {{ limit }} charactères requis',
+        maxMessage: 'Le nom est trop long ! Maximum  {{ limit }} charactères',
+    )]
     private $firstName;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Assert\Length(
+        min: 2,
+        max: 50,
+        minMessage: 'Le nom est trop court ! Minimum {{ limit }} charactères requis',
+        maxMessage: 'Le nom est trop long ! Maximum  {{ limit }} charactères',
+    )]
     private $lastName;
 
     #[ORM\Column(type: 'string', length: 255)]
     private $email;
 
     #[ORM\Column(type: 'text')]
+    #[Assert\NotBlank(message: 'Ce champ ne peut pas être vide')]
     private $message;
 
     public function getId(): ?int

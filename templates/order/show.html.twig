@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Page Accueil | Home
+{% block title %}Details de commande
 {% endblock %}
 
 {% block body %}
@@ -30,58 +30,35 @@
 			<div class="main-container">
 				{% include "partials/headermobile.html.twig" %}
 
-				<div class="content-wrapper">
-					<div class="content-wrapper-header">
-						<div class="content-wrapper-context">
-							<h3 class="img-content">
-								Chauffeur privé
-							</h3>
-							<div class="content-text">Riche d’une expérience de conduite de 20 années, votre chauffeur maitrise 5 langues : anglais, français, espagnol, portugais et brésilien. Diplômé, il est titulaire du N° de licence.</div>
-							<button class="content-button bg-white  bold">
-								<a class="bg-white text-success text-decoration-none" href="{{path('app_contact')}}">Contactez</a>
-							</button>
-						</div>
-						<img class="content-wrapper-img" src="https://assets.codepen.io/3364143/glass.png" alt="">
-					</div>
+				<main class="content-wrapper">
 
-					<div class="content-section">
-						<div class="content-section-title">Apps in your plan</div>
-						<div class="apps-card">
-							<div class="app-card">
-								<span>
-									IZY DRIVE DANS VOTRE VILLE
-								</span>
-								<div class="app-card__subtext">VTC IZY DRIVE, riche de l'expérience depuis 25 ans pour vous accompagner dans vos dépalacements en France métropolitan. Où que vous soyez dans la Haute Garonne, faites appel à vore chauffeur pour tous vos besoins. Votre confort est notre priorité.</div>
-								<div class="app-card-buttons">{# <img src="https://vtcexcellence.com/wp-content/uploads/2021/05/VTC-Toulouse-Chauffeur-jpg.jpg" alt="#"> #}
-									{# <button class="content-button status-button">Update</button> #}
-									{# <div class="menu"></div> #}
-								</div>
-							</div>
-							<div class="app-card">
-								<span>
-									IZY DRIVE DANS VOTRE VILLE
-								</span>
-								<div class="app-card__subtext">Quelle que soit votre destination ou votre demande personnalisée, que vous soyez particuliers ou professionnels, nous vous proposons un service de transport de personnes de qualité, transparent et sécurisé, avec des chauffeurs professionnels, expérimentés et à votre écoute.
-								</div>
-								<div class="app-card-buttons">{# <img src="https://vtcexcellence.com/wp-content/uploads/2021/05/VTC-EXCELLENCE-SERVICE-CONCIERGERIE.jpg" alt=""> #}
-									{# <button class="content-button status-button">Update</button> #}
-									{# <div class="menu"></div> #}
-								</div>
-							</div>
-
-							<div class="app-card">
-								<span>
-									SERVICE AU KM
-								</span>
-								<div class="app-card__subtext">Nous opérons 7J/7 et 24h/24, pour vos déplacements en VTC sur Paris, Bordeaux et Strasbourg, vers les aéroports, mais aussi pour vos rendez-vous professionnels, conférences, parcs d'affaires etc. Et pour toute demande d'information complémentaire, n'hésitez pas à nous contacter. A bientôt !</div>
-								<div class="app-card-buttons">{# <button class="content-button status-button">Update</button> #}
-									{# <img src="https://vtcexcellence.com/wp-content/uploads/2021/05/louer-un-vehicule-avec-chauffeur-a-toulouse-1.jpg" alt="#"> #}
-									{# <div class="menu"></div> #}
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<table class="table">
+        <tbody>
+            <tr>
+                <th class="side-title">Id</th>
+                <td class="side-title">{{ order.id }}</td>
+            </tr>
+            <tr>
+                <th class="side-title">Départ</th>
+                <td class="side-title">{{ order.depart }}</td>
+            </tr>
+            <tr>
+                <th class="side-title">Déstination</th>
+                <td class="side-title">{{ order.destination }}</td>
+            </tr>
+            <tr>
+                <th class="side-title">Date de départ</th>
+                <td class="side-title">{{ order.dateReservation ? order.dateReservation|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th class="side-title">Date de reservation</th>
+                <td class="side-title">{{ order.dateCreation ? order.dateCreation|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+	<button class="content-button w-25 animate__flipInY animate__animated">
+					<a href="{{ path('show_order') }}" class=" text-decoration-none side-title">retour</a></button>
+				</main>
 			</div>
 		</div>
 		<div class="overlay-app"></div>
