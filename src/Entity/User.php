@@ -43,11 +43,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 //  sécurité du nom , controle
     #[ORM\Column(type: 'string', length: 255)]
     #[Assert\Length(
-        min: 2,
+       min: 2,
         max: 50,
         minMessage: 'Le nom est trop court ! Minimum {{ limit }} charactères requis',
         maxMessage: 'Le nom est trop long ! Maximum  {{ limit }} charactères',
-    )]
+    ) ]
     private $lastname;
     
 //  sécurité du prénom , controle
