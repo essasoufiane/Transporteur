@@ -48,6 +48,10 @@
 								<a class="text-decoration-none text-white" href="{{ path('app_user_edit', {'id': app.user.id}) }}">Modifier
 								</a>
 							</button>
+							<button class="content-button  animate__flipInY animate__animated">
+								<a class="text-decoration-none text-white" href="{{ path('app_forgot_password_request', {'id': app.user.id}) }}">Modifier le mots de passe
+								</a>
+							</button>
 						</div>
 						<img width="50px" height="200px" class="content-wrapper-img rounded-circle " src="{{ app.user.image }}" alt="image de profile">
 					</div>
