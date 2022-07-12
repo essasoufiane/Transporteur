@@ -95,7 +95,7 @@ $(function () {
   var monBtnMenu = document.querySelector(".menuSelector");
   
   monBtnMenu.addEventListener("click", function(){
-  console.log(monBtnMenu);
+//   console.log(monBtnMenu);
 
 	var monContainer = document.querySelector(".main-header");
 
@@ -115,6 +115,7 @@ var btnOuvert = document.querySelector("body");
 	}
 
 });
+
 
 // daoud a
 
