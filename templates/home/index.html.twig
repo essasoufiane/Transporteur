@@ -34,19 +34,17 @@
 					<section class="content-wrapper-header">
 						<div class="content-wrapper-context">
 
-							
-						<div class="content-text">{{ville}} à {{temperature}}°C</div>
-						{# {{deg}} #}
-						{# <p>{{ feel_like}}</p> #}
-							<div class="content-text">Ciel {{weather}} et {{ description}}</div>
-							<div class="content-text">Avec un vent allant de {{vent }}km/h</div>
-							<br>
-							<h1 class="img-content">
+							<h1 >
 								Votre chauffeur privé
 							</h1>
 
-							<div class="content-text">Un service de transport de qualite, rapide et efficace.
-							</div>
+							<div class="content-text">Un service de transport de qualite, rapide et efficace.</div>
+							
+						<div class="content-text">{{ville}} : {{temperature|format_number({fraction_digit: 0})}} C° (ressentie {{feel_like|format_number({fraction_digit: 0})}}C°)</div>
+						
+							<div class="content-text">Temps : {{ description}}</div>
+							<div class="content-text">Vent : {{vent|format_number({fraction_digit: 0}) }} km/h</div>
+							<br>
 							{# Commandez une course sans plus attendre avec votre chauffeur préféré. #}
 							<button class="content-button  animate__flipInY animate__animated">
 								<a class="text-decoration-none text-white" href="{{path('app_order_new')}}">Reservez!</a>

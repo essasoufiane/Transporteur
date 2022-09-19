@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'af0ec6147262dfc395415adcb41dbca5eb6c051e',
+        'reference' => 'f9f8bba627fa0b597306dd92bff7b0966a66fa22',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'af0ec6147262dfc395415adcb41dbca5eb6c051e',
+            'reference' => 'f9f8bba627fa0b597306dd92bff7b0966a66fa22',
             'dev_requirement' => false,
         ),
         'cocur/slugify' => array(
@@ -1368,6 +1368,15 @@
             'install_path' => __DIR__ . '/../twig/extra-bundle',
             'aliases' => array(),
             'reference' => '2e58256b0e9fe52f30149347c0547e4633304765',
+            'dev_requirement' => false,
+        ),
+        'twig/intl-extra' => array(
+            'pretty_version' => 'v3.4.2',
+            'version' => '3.4.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../twig/intl-extra',
+            'aliases' => array(),
+            'reference' => '151e50fad9c7915bd56f0adf3f0cb3c47e6ed28a',
             'dev_requirement' => false,
         ),
         'twig/twig' => array(

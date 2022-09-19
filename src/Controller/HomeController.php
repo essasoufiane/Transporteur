@@ -15,7 +15,7 @@ class HomeController extends AbstractController
     public function index(): Response
     {
 
-        $url = "http://api.openweathermap.org/data/2.5/weather?q=Marseille&lang=fr&units=metric&appid=fd7f4e76060b245952329d86d0a4d642";
+        $url = "http://api.openweathermap.org/data/2.5/weather?q=Strasbourg&lang=fr&units=metric&appid=fd7f4e76060b245952329d86d0a4d642";
 
         // Ajouter  les resultat
         $raw = file_get_contents($url);
