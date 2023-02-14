@@ -5,14 +5,14 @@ namespace App\Form;
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Validator\Constraints\IsTrue;
-use Symfony\Component\Validator\Constraints\Length;
-use Symfony\Component\Validator\Constraints\NotBlank;
+// use Symfony\Component\Validator\Constraints\IsTrue;
+// use Symfony\Component\Validator\Constraints\Length;
+// use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+// use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
@@ -32,12 +32,13 @@ class RegistrationFormType extends AbstractType
             ])
             ->add('adresse', TextType::class, [
                 "label" => "Votre adresse",
-                "attr" => ["placeholder" => "25 rue de la farfouille, Paris"]
+                "attr" => ["placeholder" => "25 rue de la République, Paris"]
             ])
                 // daouda ajout de la proprié image 
                 ->add('image', UrlType::class, [
-                    'label' => 'Lien de votre image',
-                    'attr'  => ['placeholder' => 'Coller un lien d\'image']   
+                    'required'=> false,
+                    'label' => 'Lien vers votre image',
+                    'attr'  => ['placeholder' => 'Coller un lien vers une image' , 'empty_data' => 'assets/images/Question mark.png'  ]   
                 ])
 
             ->add('email', EmailType::class, [

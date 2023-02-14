@@ -9,8 +9,6 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
-
-
 use Symfony\Component\Validator\Constraints as Assert;
  
  
@@ -40,7 +38,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string')]
     private $password;
 
-//  sécurité du nom , controle
+    //  sécurité du nom , controle
     #[ORM\Column(type: 'string', length: 255)]
     #[Assert\Length(
        min: 2,
@@ -50,7 +48,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     ) ]
     private $lastname;
     
-//  sécurité du prénom , controle
+    //  sécurité du prénom , controle
     #[ORM\Column(type: 'string', length: 255)]
     #[Assert\Length(
         min: 2,
